@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "aws_prodbot"
+version = "0.1.0"
+description = ""
+authors = ["Pierre-Nick Durette <pndurette@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+bs4 = "^0.0.1"
+requests = "^2.25.1"
+nltk = "^3.6.2"
+markovify = "^0.9.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.5b2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
