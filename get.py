@@ -10,6 +10,7 @@ import sys
 
 def get_items() -> List[Dict]:
     items = []
+    names = []
 
     # Get main Webpage
     url = "https://aws.amazon.com/products/"
@@ -35,6 +36,11 @@ def get_items() -> List[Dict]:
         product["name"] = d.a.span.text.strip()
         product["blurb"] = d.a.cite.text.strip()
 
+        # Each product can exist in many main page
+        # categories, ignore subsquent ones
+        if product["name"] in names:
+            continue
+
         # Get product Webpage
         print("Getting", product["name"])
         product_path = d.a["href"]
@@ -59,6 +65,7 @@ def get_items() -> List[Dict]:
                 continue
 
         product["desc"] = p
+        names.append(product["name"])
 
         items.append(product)
 

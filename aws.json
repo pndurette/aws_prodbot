@@ -255,11 +255,6 @@
     "desc": "AWS App2Container (A2C) is a command-line tool for modernizing .NET and Java applications into containerized applications.\u00a0A2C analyzes and builds an inventory of all applications running in virtual machines, on-premises or in the cloud. You simply select the application you want to containerize, and A2C packages the application artifact and identified dependencies into container images, configures the network ports, and generates the ECS task and Kubernetes pod definitions. A2C provisions, through CloudFormation, the cloud infrastructure and CI/CD pipelines required to deploy the containerized .NET or Java application into production. With A2C, you can easily modernize your existing applications and standardize the deployment and operations through containers."
   },
   {
-    "name": "AWS App Runner",
-    "blurb": "Build and run containerized web apps at scale",
-    "desc": "AWS App Runner is a fully managed service that makes it easy for developers to quickly deploy containerized web applications and APIs, at scale and with no prior infrastructure experience required. Start with your source code or a container image. App Runner automatically builds and deploys the web application and load balances traffic with encryption. App Runner also scales up or down automatically to meet your traffic needs. With App Runner, rather than thinking about servers or scaling, you have more time to focus on your applications."
-  },
-  {
     "name": "AWS Copilot",
     "blurb": "Easily deploy and operate containerized applications",
     "desc": "AWS Copilot is a command line interface (CLI) that enables customers to quickly launch and easily manage containerized applications on AWS. AWS Copilot provides a simple declarative set of commands, including examples and guided experiences built in to help customers deploy quickly. After writing your application code, Copilot automates each step in the deployment lifecycle including pushing to a registry, creating a task definition, and creating a cluster. Default application types are provided for new applications based upon AWS best practices to increase developer productivity and simplify running containers in the cloud. All you need to spin up production ready services is AWS Copilot, an AWS account, and your code. AWS Copilot is generally available."
@@ -325,11 +320,6 @@
     "desc": "Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets. The core of Amazon Neptune is a purpose-built, high-performance graph database engine optimized for storing billions of relationships and querying the graph with milliseconds latency.\u00a0Amazon Neptune supports popular graph models Property Graph and W3C's RDF, and their respective query languages Apache TinkerPop Gremlin and SPARQL, allowing you to easily build queries that efficiently navigate highly connected datasets. Neptune powers graph use cases such as recommendation engines, fraud detection, knowledge graphs, drug discovery, and network security."
   },
   {
-    "name": "Amazon Quantum Ledger Database (QLDB)",
-    "blurb": "Fully managed ledger database",
-    "desc": "Amazon QLDB is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log \u200eowned by a central trusted authority. Amazon QLDB can be used to track each and every application data change and maintains a complete and verifiable history of changes over time."
-  },
-  {
     "name": "Amazon RDS",
     "blurb": "Managed Relational Database Service for MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB",
     "desc": "Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as hardware provisioning, database setup, patching and backups. It frees you to focus on your applications so you can give them the fast performance, high availability, security and compatibility they need."
@@ -340,11 +330,6 @@
     "desc": "Amazon Relational Database Service (RDS) on VMware lets you deploy managed databases in on-premises VMware environments using the Amazon RDS\u00a0technology enjoyed by hundreds of thousands of AWS customers. Amazon RDS provides cost-efficient and resizable capacity while automating time-consuming administration tasks including infrastructure provisioning, database setup, patching, and backups, freeing you to focus on your applications. RDS on VMware brings many of these same benefits to your on-premises deployments, making it easy to set up, operate, and scale databases in VMware vSphere private data centers."
   },
   {
-    "name": "Amazon Redshift",
-    "blurb": "Fast, Simple, Cost-effective Data Warehousing",
-    "desc": "No other data warehouse makes it as easy to gain new insights from all your data. With Redshift, you can query and combine exabytes of structured and semi-structured data across your data warehouse, operational database, and data lake using standard SQL. Redshift lets you easily save the results of your queries back to your S3 data lake using open formats, like Apache Parquet, so that you can do additional analytics from other analytics services like Amazon EMR, Amazon Athena, and Amazon SageMaker."
-  },
-  {
     "name": "Amazon Timestream",
     "blurb": "Fully managed time series database",
     "desc": "Amazon Timestream is a fast, scalable, and serverless time series database service for IoT and operational applications that makes it easy to store and analyze trillions of events per day up to 1,000 times faster and at as little as 1/10th the cost of relational databases. Amazon Timestream saves you time and cost in managing the lifecycle of time series data by keeping recent data in memory and moving historical data to a cost optimized storage tier based upon user defined policies. Amazon Timestream\u2019s purpose-built query engine lets you access and analyze recent and historical data together, without needing to specify explicitly in the query whether the data resides in the in-memory or cost-optimized tier. Amazon Timestream has built-in time series analytics functions, helping you identify trends and patterns in your data in near real-time. Amazon Timestream is serverless and automatically scales up or down to adjust capacity and performance, so you don\u2019t need to manage the underlying infrastructure, freeing you to focus on building your applications."
@@ -353,11 +338,6 @@
     "name": "AWS Database Migration Service",
     "blurb": "Migrate Databases with Minimal Downtime",
     "desc": "AWS Database Migration Service helps you migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. The AWS Database Migration Service can migrate your data to and from most widely used commercial and open-source databases."
-  },
-  {
-    "name": "AWS Glue",
-    "blurb": "Simple, scalable, and serverless data integration",
-    "desc": "AWS Glue is a serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development. AWS Glue provides all of the capabilities needed for data integration so that you can start analyzing your data and putting it to use in minutes instead of months."
   },
   {
     "name": "Amazon CodeGuru",
@@ -440,11 +420,6 @@
     "desc": "Amazon AppStream 2.0 is a fully managed non-persistent desktop and application virtualization service that allows your users to securely access the data, applications, and resources they need, anywhere, anytime, from any supported device.\u00a0With AppStream 2.0, you can easily scale your applications and desktops to any number of users across the globe without acquiring, provisioning, and operating hardware or infrastructure.\u00a0AppStream 2.0 is built on AWS, so you benefit from a data center and network architecture designed for the most security-sensitive organizations. Each end user has a fluid and responsive experience because your applications run on virtual machines optimized for specific use cases and each streaming sessions automatically adjusts to network conditions."
   },
   {
-    "name": "Amazon WorkDocs",
-    "blurb": "Secure enterprise document storage and sharing",
-    "desc": "Amazon WorkDocs is a fully managed, secure content creation, storage, and collaboration service. With Amazon WorkDocs, you can easily create, edit, and share content, and because it\u2019s stored centrally on AWS, access it from anywhere on any device. Amazon WorkDocs makes it easy to collaborate with others, and lets you easily share content, provide rich feedback, and collaboratively edit documents. You can use Amazon WorkDocs to retire legacy file share infrastructure by moving file shares to the cloud. Amazon WorkDocs lets you integrate with your existing systems, and offers a rich API so that you can develop your own content-rich applications. Amazon WorkDocs is built on AWS, where your content is secured on the world's largest cloud infrastructure."
-  },
-  {
     "name": "Amazon WorkLink",
     "blurb": "Enable mobile access to internal websites",
     "desc": "Amazon WorkLink is a fully managed service that lets you provide your employees with secure, easy access to your internal corporate websites and web apps using their mobile phones. Traditional solutions such as Virtual Private Networks (VPNs) and device management software are inconvenient to use on the go, and often require the use of custom browsers that have a poor user experience. As a result, employees often forgo using them altogether."
@@ -470,19 +445,9 @@
     "desc": "Amazon Location Service makes it easy for developers to add location functionality to applications without\u00a0compromising data security and user privacy."
   },
   {
-    "name": "Amazon Pinpoint",
-    "blurb": "Personalized User Engagement Across Channels",
-    "desc": "Amazon Pinpoint is a flexible and scalable outbound and inbound marketing communications service. You can connect with customers over channels like email, SMS, push, or voice.\u00a0Amazon Pinpoint is easy to set up, easy to use, and is flexible for all marketing communication scenarios. Segment your campaign audience for the right customer and personalize your messages with the right content. Delivery and campaign metrics in Amazon Pinpoint measure the success of your communications. Amazon Pinpoint can grow with you and scales globally to billions of messages per day across channels."
-  },
-  {
     "name": "AWS AppSync",
     "blurb": "Power your apps with the right data from many sources, at scale",
     "desc": "Organizations choose to build APIs with GraphQL because it helps them develop applications faster, by giving front-end developers the ability to query multiple databases, microservices, and APIs with a single GraphQL endpoint.  AWS AppSync is a fully managed service that makes it easy to develop GraphQL APIs by handling the heavy lifting of securely connecting to data sources like AWS DynamoDB, Lambda, and more. Adding caches to improve performance, subscriptions to support real-time updates, and client-side data stores that keep off-line clients in sync are just as easy. Once deployed, AWS AppSync automatically scales your GraphQL API execution engine up and down to meet API request volumes."
-  },
-  {
-    "name": "AWS Device Farm",
-    "blurb": "Test Android, iOS, and web apps on real devices in the AWS cloud",
-    "desc": "AWS Device Farm is an application testing service that lets you improve the quality of your web and mobile apps by testing them across an extensive range of desktop browsers and real mobile devices; without having to provision and manage any testing infrastructure. The service enables you to run your tests concurrently on multiple desktop browsers or real devices to speed up the execution of your test suite, and generates videos and logs to help you quickly identify issues with your app."
   },
   {
     "name": "Amazon GameLift",
@@ -563,11 +528,6 @@
     "name": "Amazon Augmented AI",
     "blurb": "Easily implement human review of ML predictions",
     "desc": "Some machine learning applications need human oversight to ensure accuracy with sensitive data, to help provide continuous improvements and, retrain models with updated predictions. However, in these situations, you\u2019re often forced to choose between a machine learning only or human only system. Companies are looking for the best of both worlds -- integrating machine learning systems into your workflow while keeping a human eye on the results to guarantee a needed precision."
-  },
-  {
-    "name": "Amazon CodeGuru",
-    "blurb": "Find your most expensive lines of code",
-    "desc": "Automate code reviews and optimize application performance with ML-powered recommendations"
   },
   {
     "name": "Amazon Comprehend",
@@ -745,11 +705,6 @@
     "desc": "AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. CloudTrail provides event history of your AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, command line tools, and other AWS services. This event history simplifies security analysis, resource change tracking, and troubleshooting.\u00a0In addition, you can use CloudTrail to detect unusual activity in your AWS accounts. These capabilities help simplify operational analysis and troubleshooting."
   },
   {
-    "name": "AWS Command Line Interface",
-    "blurb": "Unified tool to manage AWS services",
-    "desc": "Related Links"
-  },
-  {
     "name": "AWS Compute Optimizer",
     "blurb": "Identify optimal AWS Compute resources",
     "desc": "AWS Compute Optimizer recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. Over-provisioning resources can lead to unnecessary infrastructure cost, and under-provisioning resources can lead to poor application performance. Compute Optimizer helps you choose optimal configurations for three types of AWS resources: Amazon EC2 instances, Amazon EBS volumes, and AWS Lambda functions, based on your utilization data."
@@ -910,11 +865,6 @@
     "desc": "AWS Application Migration Service (AWS MGN) allows you to quickly realize the benefits of migrating applications to the cloud without changes and with minimal downtime."
   },
   {
-    "name": "AWS Database Migration Service",
-    "blurb": "Migrate Databases with Minimal Downtime",
-    "desc": "AWS Database Migration Service helps you migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. The AWS Database Migration Service can migrate your data to and from most widely used commercial and open-source databases."
-  },
-  {
     "name": "AWS DataSync",
     "blurb": "Simple, fast, online data transfer",
     "desc": "AWS DataSync is an online data transfer service that simplifies, automates, and accelerates moving data between on-premises storage systems and AWS Storage services, as well as between AWS Storage services. You can use DataSync to migrate active datasets to AWS, archive data to free up on-premises storage capacity, replicate data to AWS for business continuity, or transfer data to the cloud for analysis and processing."
@@ -923,11 +873,6 @@
     "name": "AWS Server Migration Service",
     "blurb": "Migrate On-Premises Servers to AWS",
     "desc": "Introducing AWS Application Migration Service"
-  },
-  {
-    "name": "AWS Snow Family",
-    "blurb": "Physical devices to migrate data into and out of AWS",
-    "desc": "Applications are moving to the cloud faster today than ever before. A new category of applications requires increased capabilities and performance at the edge of the cloud, or even beyond the edge of the network.  AWS provides edge infrastructure and software that moves data processing and analysis as close as necessary to where data is created in order to deliver intelligent, real-time responsiveness and streamline the amount of data transferred. This includes deploying AWS managed hardware and software to locations outside AWS Regions and even beyond AWS Outposts.  The AWS Snow Family helps customers that need to run operations in austere, non-data center environments, and in locations where there's lack of consistent network connectivity. The Snow Family, comprised of AWS Snowcone, AWS Snowball, and AWS Snowmobile, offers a number of physical devices and capacity points, most with built-in computing capabilities. These services help physically transport up to exabytes of data into and out of AWS. Snow Family devices are owned and managed by AWS and integrate with AWS security, monitoring, storage management, and computing capabilities."
   },
   {
     "name": "AWS Transfer Family",
@@ -943,11 +888,6 @@
     "name": "Amazon VPC",
     "blurb": "Isolated Cloud Resources",
     "desc": "Amazon Virtual Private Cloud (Amazon VPC) is a service that lets you launch AWS resources in a logically isolated virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use both IPv4 and IPv6 for most resources in your virtual private cloud, helping to ensure secure and easy access to resources and applications."
-  },
-  {
-    "name": "Amazon API Gateway",
-    "blurb": "Build, Deploy, and Manage APIs",
-    "desc": "Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the \"front door\" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications."
   },
   {
     "name": "Amazon CloudFront",
@@ -1110,58 +1050,8 @@
     "desc": "AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits and bots that may affect availability, compromise security, or consume excessive resources. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that control bot traffic and block common attack patterns, such as SQL injection or cross-site scripting. You can also customize rules that filter out specific traffic patterns. You can get started quickly using Managed Rules for AWS WAF, a pre-configured set of rules managed by AWS or AWS Marketplace Sellers to address issues like the OWASP Top 10 security risks and automated bots that consume excess resources, skew metrics, or can cause downtime. These rules are regularly updated as new issues emerge. AWS WAF includes a full-featured API that you can use to automate the creation, deployment, and maintenance of security rules."
   },
   {
-    "name": "AWS Lambda",
-    "blurb": "Run code without thinking about servers",
-    "desc": "AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers, creating workload-aware cluster scaling logic, maintaining event integrations, or managing runtimes. With Lambda, you can run code for virtually any type of application or backend service - all with zero administration. Just upload your code as a ZIP file or container image, and Lambda automatically and precisely allocates compute execution power and runs your code based on the incoming request or event, for any scale of traffic. You can set up your code to automatically trigger from over 200 AWS services and SaaS applications or call it directly from any web or mobile app. You can write Lambda functions in your favorite language (Node.js, Python, Go, Java, and more) and use both serverless and container tools, such as AWS SAM or Docker CLI, to build, test, and deploy your functions."
-  },
-  {
-    "name": "Amazon API Gateway",
-    "blurb": "Build, deploy, and manage API's",
-    "desc": "Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the \"front door\" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications."
-  },
-  {
-    "name": "Amazon DynamoDB",
-    "blurb": "Managed NoSQL database",
-    "desc": "Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multi-region, multi-active, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. DynamoDB can handle more than 10 trillion requests per day and can support peaks of more than 20 million requests per second."
-  },
-  {
-    "name": "Amazon EventBridge",
-    "blurb": "Serverless event bus for SaaS apps & AWS services",
-    "desc": "Amazon EventBridge is a serverless event bus that makes it easier to build event-driven applications at scale using events generated from your applications, integrated Software-as-a-Service (SaaS) applications, and AWS services. EventBridge delivers a stream of real-time data from event sources such as Zendesk or Shopify to targets like AWS Lambda and other SaaS applications. You can set up routing rules to determine where to send your data to build application architectures that react in real- time to your data sources with event publisher and consumer completely decoupled."
-  },
-  {
-    "name": "Amazon Simple Notification Service (SNS)",
-    "blurb": "Pub/sub, SMS, email, and mobile push notifications",
-    "desc": "Amazon Simple Notification Service (Amazon SNS) is a fully managed messaging service for both application-to-application (A2A) and application-to-person (A2P) communication."
-  },
-  {
-    "name": "Amazon Simple Queue Service (SQS)",
-    "blurb": "Managed message queues",
-    "desc": "Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. SQS eliminates the complexity and overhead associated with managing and operating message oriented middleware, and empowers developers to focus on differentiating work. Using SQS, you can send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available. Get started with SQS in minutes using the AWS console, Command Line Interface or SDK of your choice, and three simple commands."
-  },
-  {
     "name": "Amazon Simple Storage Service (S3)",
     "blurb": "Scalable storage in the cloud",
-    "desc": "Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics. Amazon S3 provides easy-to-use management features so you can organize your data and configure finely-tuned access controls to meet your specific business, organizational, and compliance requirements. Amazon S3 is designed for 99.999999999% (11 9's) of durability, and stores data for millions of applications for companies all around the world."
-  },
-  {
-    "name": "AWS AppSync",
-    "blurb": "Power your apps with the right data from many sources, at scale",
-    "desc": "Organizations choose to build APIs with GraphQL because it helps them develop applications faster, by giving front-end developers the ability to query multiple databases, microservices, and APIs with a single GraphQL endpoint.  AWS AppSync is a fully managed service that makes it easy to develop GraphQL APIs by handling the heavy lifting of securely connecting to data sources like AWS DynamoDB, Lambda, and more. Adding caches to improve performance, subscriptions to support real-time updates, and client-side data stores that keep off-line clients in sync are just as easy. Once deployed, AWS AppSync automatically scales your GraphQL API execution engine up and down to meet API request volumes."
-  },
-  {
-    "name": "AWS Fargate",
-    "blurb": "Serverless compute for containers",
-    "desc": "AWS Fargate is a serverless compute engine for containers that works with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS). Fargate makes it easy for you to focus on building your applications. Fargate removes the need to provision and manage servers, lets you specify and pay for resources per application, and improves security through application isolation by design."
-  },
-  {
-    "name": "AWS Step Functions",
-    "blurb": "Coordination for distributed applications",
-    "desc": "AWS Step Functions is a serverless function orchestrator that makes it easy to sequence AWS Lambda functions and multiple AWS services into business-critical applications. Through its visual interface, you can create and run a series of checkpointed and event-driven workflows that maintain the application state.\u00a0The output of one step acts as an input to the next. Each step in your application executes in order, as defined by your business logic."
-  },
-  {
-    "name": "Amazon Simple Storage Service (S3)",
-    "blurb": "Scalable Storage in the Cloud",
     "desc": "Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics. Amazon S3 provides easy-to-use management features so you can organize your data and configure finely-tuned access controls to meet your specific business, organizational, and compliance requirements. Amazon S3 is designed for 99.999999999% (11 9's) of durability, and stores data for millions of applications for companies all around the world."
   },
   {
@@ -1193,11 +1083,6 @@
     "name": "AWS Backup",
     "blurb": "Centralized backup across AWS services",
     "desc": "AWS Backup enables you to centralize and automate data protection across AWS services. AWS Backup offers a cost-effective, fully managed, policy-based service that further simplifies data protection at scale. AWS Backup also helps you support your regulatory compliance or business policies for data protection. Together with AWS Organizations, AWS Backup enables you to centrally deploy data protection policies to configure, manage, and govern your backup activity across your organization\u2019s AWS accounts and resources, including Amazon Elastic Compute Cloud (Amazon EC2) instances, Amazon Elastic Block Store (Amazon EBS) volumes, Amazon Relational Database Service (RDS) databases (including Amazon Aurora clusters), Amazon DynamoDB tables, Amazon Elastic File System (EFS), Amazon FSx for Lustre, Amazon FSx for Windows File Server, and AWS Storage Gateway volumes."
-  },
-  {
-    "name": "AWS Snow Family",
-    "blurb": "Physical edge computing and storage devices for rugged or disconnected environments",
-    "desc": "Applications are moving to the cloud faster today than ever before. A new category of applications requires increased capabilities and performance at the edge of the cloud, or even beyond the edge of the network.  AWS provides edge infrastructure and software that moves data processing and analysis as close as necessary to where data is created in order to deliver intelligent, real-time responsiveness and streamline the amount of data transferred. This includes deploying AWS managed hardware and software to locations outside AWS Regions and even beyond AWS Outposts.  The AWS Snow Family helps customers that need to run operations in austere, non-data center environments, and in locations where there's lack of consistent network connectivity. The Snow Family, comprised of AWS Snowcone, AWS Snowball, and AWS Snowmobile, offers a number of physical devices and capacity points, most with built-in computing capabilities. These services help physically transport up to exabytes of data into and out of AWS. Snow Family devices are owned and managed by AWS and integrate with AWS security, monitoring, storage management, and computing capabilities."
   },
   {
     "name": "AWS Storage Gateway",
