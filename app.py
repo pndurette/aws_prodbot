@@ -61,24 +61,19 @@ class POSifiedText(markovify.Text):
         return sentence
 
 
-def service_desc(text, tags_dict, service_name):
+def service_desc(text, tags_dict):
     # text_model = POSifiedText(text, state_size=2)
     text_model = markovify.Text(text, state_size=2)
 
     # VBZ: verb, present tense, 3rd person singular
     verbs = tags_dict["VBZ"]
-    # print(verbs)
 
     for _ in range(0, 100):
         try:
             # return text_model.make_sentence()
-            # return "AWS Test " \
-            #     + text_model.make_sentence_with_start(
-            #         beginning=start_expression(verbs), strict=False
-            #     )
             return text_model.make_sentence_with_start(
-                    beginning=start_expression(verbs), strict=False
-                )
+                beginning=start_expression(verbs), strict=False
+            )
         except markovify.text.ParamError:
             continue
         break
@@ -267,16 +262,17 @@ if __name__ == "__main__":
     # Item names
     existing_names = [i["name"] for i in items]
 
-    for _ in range(1):
-        service_name = service_name(existing_names, tags_dict)
-        service_desc = service_desc(text, tags_dict, service_name)
+    for _ in range(10):
+        name = service_name(existing_names, tags_dict)
+        desc = service_desc(text, tags_dict)
 
-        body = f"{service_name}\n\n{service_desc}"
+        body = f"{name}\n\n{name} {desc}"
 
         print(body)
-        print()
+        print("-")
 
-    import pprint
+    # import pprint
+
     # pprint.pprint(tags_dict)
     # pprint.pprint(existing_names)
 
