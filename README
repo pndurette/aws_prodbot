@@ -36,6 +36,7 @@ docker run \
 	-e ACCESS_TOKEN="$ACCESS_TOKEN" \
 	-e ACCESS_TOKEN_SECRET="$ACCESS_TOKEN_SECRET" \
     -e AWS_PRODUCTS_FILE="$AWS_PRODUCTS_FILE" \
+    -p 8080:8080 \
 	gcr.io/twitter-bots-pnd/aws-prodbot:latest
 ```
 

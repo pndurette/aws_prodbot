@@ -23,7 +23,7 @@ LOGGER_SETTINGS = {
         }
     },
     "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "default"}},
-    "loggers": {"tweet": {"handlers": ["console"], "level": "DEBUG"}},
+    "loggers": {"root": {"handlers": ["console"], "level": "DEBUG"}},
 }
 
 # Logger
@@ -323,13 +323,15 @@ def _capitalize(str):
         return str[0].upper() + str[1:]
 
 
-def format_tweet(service_name: str, service_desc: str) -> str:
-    tweet = f"{service_name}™\n\n{service_name} {service_desc}"
-    log.debug(f"{len(tweet)=}, {tweet=}")
-    return tweet
+def tweet_intro(service_name: str) -> str:
+    tweet_intro = f"Introducing {service_name}™\n\n{service_name} "
+    log.debug(f"{len(tweet_intro)=}, {tweet_intro=}")
+    return tweet_intro
 
 
 def send_tweet(tweet: str) -> None:
+    log.debug(f"{len(tweet)=}, {tweet=}")
+
     if DISABLE_TWEET:
         return
 
@@ -340,10 +342,9 @@ def send_tweet(tweet: str) -> None:
     # # Create API object
     api = tweepy.API(auth)
 
-    log.debug(f"Tweeting: {tweet}")
-
     # Create a tweet
     api.update_status(tweet)
+    log.debug(f"Tweet sent: {tweet}")
 
 
 def update_twitter_bio():
@@ -370,20 +371,17 @@ def main(aws_json_file):
         # Service name
         name = service_name(existing_names, tags_dict)
 
-        # Space left for service description, incl.
-        # * 2x name
-        # * 2x newlines
-        # * 1x space between name and desc
-        # * 1x trademark
-        # (from maximum Tweet lenght of 280 chars)
-        desc_max_len = 280 - (2 * len(name)) - 2 - 1 - 1
+        # Tweet intro
+        intro = tweet_intro(name)
+
+        # Space left for service description
+        desc_max_len = 280 - len(intro)
 
         # Service description
         desc = service_desc(corpus, tags_dict, desc_max_len)
 
         # Tweet
-        tweet = format_tweet(name, desc)
-        send_tweet(tweet)
+        send_tweet(f"{intro}{desc}")
 
     # import pprint
     # pprint.pprint(tags_dict)
