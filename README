@@ -1,0 +1,33 @@
+# AWS Prod Bot
+
+## Build
+
+```bash
+docker build . -t gcr.io/twitter-bots-pnd/aws-prodbot:latest
+```
+
+## Push
+
+```bash
+# docker push pndurette/aws-prodbot:latest
+docker push gcr.io/twitter-bots-pnd/aws-prodbot:latest
+```
+
+## Run
+
+```bash
+docker run \
+	-e API_KEY="$API_KEY" \
+	-e API_SECRET="$API_SECRET" \
+	-e ACCESS_TOKEN="$ACCESS_TOKEN" \
+	-e ACCESS_TOKEN_SECRET="$ACCESS_TOKEN_SECRET" \
+	gcr.io/twitter-bots-pnd/aws-prodbot:latest
+```
+
+```
+TF notes
+enable container registry
+enable cloud run
+enable cloud scheduler
+enable secrets manager
+```

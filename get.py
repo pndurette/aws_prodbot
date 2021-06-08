@@ -7,6 +7,10 @@ from typing import Dict, List
 from bs4 import BeautifulSoup
 from requests import get
 
+# The numbers of paragrahs of each product page to scrape
+# The more we add, the less relevant it becomes
+PARAGRAPHS = 1
+
 
 def get_items() -> List[Dict]:
     items = []
@@ -51,15 +55,15 @@ def get_items() -> List[Dict]:
 
         # 1. Old product page, all <p> elements under div.lead
         # e.g. https://aws.amazon.com/cloudsearch/
-        p = [x.text.strip() for x in soup.select("div.lead p")]
+        p = [x.text.strip() for x in soup.select("div.lead p")[:PARAGRAPHS]]
 
         if not p:
             # 2. New product page
             # No distinct structure, but the first <p> elements
             # Have the descriptions, take the first 2.
             # e.g. https://aws.amazon.com/athena/
-            p= [x.text.strip() for x in soup.select("p")[:2]]
-        
+            p = [x.text.strip() for x in soup.select("p")[:PARAGRAPHS]]
+
         # elif not p:
         #     # 3. The page is irregular, ignore (e.g. a beta)
         #     # e.g. https://docs.aws.amazon.com/honeycode/index.html
@@ -102,7 +106,9 @@ def save_items(items, filename) -> None:
 
 
 if __name__ == "__main__":
+    # Usage python get.py <json to save>
+
     items = get_items()
     filename = sys.argv[1]
 
-    save_items(items, filename)
+    save_items(items, filename, lenght)

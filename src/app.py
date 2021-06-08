@@ -1,6 +1,7 @@
 import json
 import logging
 import logging.config
+import os
 import random
 import re
 import sys
@@ -9,8 +10,16 @@ from typing import Dict, List, Tuple
 
 import markovify
 import nltk
+import tweepy
 from nltk import word_tokenize
 from nltk.probability import FreqDist
+
+# Get Twitter creds via env. vars
+API_KEY = os.environ.get("API_KEY")
+API_SECRET = os.environ.get("API_SECRET")
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
+ACCESS_TOKEN_SECRET = os.environ.get("ACCESS_TOKEN_SECRET")
+
 
 # Logger settings
 LOGGER_SETTINGS = {
@@ -96,6 +105,7 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
     # Generate a service mane using Markov Chains
     # Uses the whole corpus text, tags dict and specifies a max lenght
 
+    # 'state_size' defines how many words to look behind to guess the next
     # text_model = POSifiedText(text, state_size=2)
     text_model = markovify.Text(corpus, state_size=2)
 
@@ -110,9 +120,9 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
             sentence = text_model.make_sentence_with_start(
                 beginning=start_expression(verbs), strict=False
             )
-            
-            log.debug(f"Run #{i}, {max_len=} {len(sentence)=}")
-            
+
+            log.debug(f"Run #{i}, {max_len=} {len(sentence)=}, {sentence=}")
+
             if len(sentence) <= max_len:
                 return sentence
             else:
@@ -277,9 +287,10 @@ def service_name(names_list, tags_dict):
     name.append(suffix)
     name.append(purpose)
 
+    log.debug(f"{name=}")
     # Clean (strip and remove empty tokens)
     name = [n.strip() for n in name if len(n) > 0]
-    
+
     # Join into a single string
     name_str = " ".join(name)
 
@@ -300,9 +311,27 @@ def _capitalize(str):
 
 
 def format_tweet(service_name: str, service_desc: str) -> str:
-    tweet = f"{service_name}\n\n{service_name} {service_desc}"
+    tweet = f"{service_name}™\n\n{service_name} {service_desc}"
     log.debug(f"{len(tweet)=}, {tweet=}")
     return tweet
+
+
+def send_tweet(tweet: str) -> None:
+    # Authenticate to Twitter
+    auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
+    auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+
+    # # Create API object
+    api = tweepy.API(auth)
+
+    log.debug(f"Tweeting: {tweet}")
+
+    # Create a tweet
+    api.update_status(tweet)
+
+
+def update_twitter_bio():
+    pass
 
 
 if __name__ == "__main__":
@@ -323,23 +352,25 @@ if __name__ == "__main__":
     # Item names
     existing_names = [i["name"] for i in items]
 
-    for _ in range(5):
+    for _ in range(1):
         # Service name
         name = service_name(existing_names, tags_dict)
 
-        # Space left for service description
+        # Space left for service description, incl.
+        # * 2x name
+        # * 2x newlines
+        # * 1x space between name and desc
+        # * 1x trademark
         # (from maximum Tweet lenght of 280 chars)
-        desc_max_len = 280 - len(name)
+        desc_max_len = 280 - (2 * len(name)) - 2 - 1 - 1
 
         # Service description
         desc = service_desc(corpus, tags_dict, desc_max_len)
 
         # Tweet
         tweet = format_tweet(name, desc)
-
-        print(tweet)
-        print("-")
+        send_tweet(tweet)
 
     # import pprint
     # pprint.pprint(tags_dict)
-    # pprint.pprint(existing_names)
+    # pprint.pprint(existing_names)'
