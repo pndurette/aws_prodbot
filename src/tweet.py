@@ -147,7 +147,7 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
 
 
 def service_name(names_list, tags_dict):
-    # Generate a service mane already existing nounds and words
+    # Generate a service mane already existing nouns and words
     # Uses statistics and frequence of usage of some existing words
     # and some AWS service name formats
 
@@ -210,8 +210,9 @@ def service_name(names_list, tags_dict):
     # FreqDist.most_common gives returns
     # [(<word>, <count>), (<word>, <count>), ...]
     # in order of frequency, keep the most common words
+    # (nb: there's less really frequent suffixes)
     top_prefixes, _ = zip(*prefix_fdist.most_common(12))
-    top_suffixes, _ = zip(*suffix_fdist.most_common(12))
+    top_suffixes, _ = zip(*suffix_fdist.most_common(8))
 
     top_prefixes = list(top_prefixes)
     top_suffixes = list(top_suffixes)
