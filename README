@@ -1,5 +1,7 @@
 # AWS Prod Bot
 
+Generate absurd-yet-plausible AWS offerings by mashing up existing products and their documentation with basic NLP, Markov Chains and by analysing current naming patterns. 
+
 ## Build
 
 ```bash
@@ -56,4 +58,8 @@ enable container registry
 enable cloud run
 enable cloud scheduler
 enable secrets manager
+create SA (see https://benjamincongdon.me/blog/2019/11/21/Setting-up-Cloud-Scheduler-to-Trigger-Cloud-Run/)
+create secrets
+give secrets access to cloud run,
+give invoke to SA
 ```
