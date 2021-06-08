@@ -15,14 +15,39 @@ docker push gcr.io/twitter-bots-pnd/aws-prodbot:latest
 
 ## Run
 
+Set `DISABLE_TWEET` to anything to only generate it but not make any attempt to tweet
+
+### Dev
+
+#### Local
+
+```bash
+cd src
+source ../.env
+python tweet.py aws.json
+```
+
+#### Docker
+
 ```bash
 docker run \
 	-e API_KEY="$API_KEY" \
 	-e API_SECRET="$API_SECRET" \
 	-e ACCESS_TOKEN="$ACCESS_TOKEN" \
 	-e ACCESS_TOKEN_SECRET="$ACCESS_TOKEN_SECRET" \
+    -e AWS_PRODUCTS_FILE="$AWS_PRODUCTS_FILE" \
 	gcr.io/twitter-bots-pnd/aws-prodbot:latest
 ```
+
+### Production (not really, but yeah)
+
+```bash
+cd src
+source ../.env
+flask run --host=0.0.0.0 --port 8080
+```
+
+## Misc notes
 
 ```
 TF notes
