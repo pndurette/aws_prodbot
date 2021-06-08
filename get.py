@@ -1,11 +1,11 @@
-from typing import List, Dict
-from bs4 import BeautifulSoup
-from requests import get
-from time import sleep
-import urllib.parse
-import logging
 import json
 import sys
+import urllib.parse
+from time import sleep
+from typing import Dict, List
+
+from bs4 import BeautifulSoup
+from requests import get
 
 
 def get_items() -> List[Dict]:
@@ -49,22 +49,46 @@ def get_items() -> List[Dict]:
         # Extract product description
         soup = BeautifulSoup(r.text, "html.parser")
 
-        try:
-            # Old product page, first <p> under div.lead
-            # e.g. https://aws.amazon.com/cloudsearch/
-            p = soup.select_one("div.lead p").text.strip()
-        except AttributeError:
-            # New product page, first <p>
-            # e.g. https://aws.amazon.com/athena/
-            try:
-                p = soup.select_one("p").text.strip()
-            except AttributeError:
-                # The page is irregular, ignore (e.g. a beta)
-                # e.g. https://docs.aws.amazon.com/honeycode/index.html
-                print("Can't parse", product["name"])
-                continue
+        # 1. Old product page, all <p> elements under div.lead
+        # e.g. https://aws.amazon.com/cloudsearch/
+        p = [x.text.strip() for x in soup.select("div.lead p")]
 
-        product["desc"] = p
+        if not p:
+            # 2. New product page
+            # No distinct structure, but the first <p> elements
+            # Have the descriptions, take the first 2.
+            # e.g. https://aws.amazon.com/athena/
+            p= [x.text.strip() for x in soup.select("p")[:2]]
+        
+        # elif not p:
+        #     # 3. The page is irregular, ignore (e.g. a beta)
+        #     # e.g. https://docs.aws.amazon.com/honeycode/index.html
+        #     print("Can't parse", product["name"])
+        #     continue
+
+        # try:
+        #     # Old product page, first <p> under div.lead
+        #     # e.g. https://aws.amazon.com/cloudsearch/
+        #     # p = soup.select_one("div.lead p").text.strip()
+        #     p = [x.text.strip() for x in soup.select("div.lead p")]
+        # except AttributeError:
+        #     # New product page, first <p>
+        #     # e.g. https://aws.amazon.com/athena/
+        #     try:
+        #         # The main description is the only <div> that has this
+        #         # color style set. Text is in the <p> elements.
+        #         print("HERE")
+        #         p = [x.text.strip() for x in soup.select("div[style='color:#232f3e;'] p")]
+        #         print("HERE")
+        #         print(p)
+        #     except AttributeError:
+        #         # The page is irregular, ignore (e.g. a beta)
+        #         # e.g. https://docs.aws.amazon.com/honeycode/index.html
+        #         print("Can't parse", product["name"])
+        #         continue
+
+        product["desc"] = " ".join(p)
+
         names.append(product["name"])
 
         items.append(product)
