@@ -115,7 +115,7 @@ class POSifiedText(markovify.Text):
 
 
 def service_desc(corpus: str, tags_dict: Dict, max_len: int):
-    # Generate a service mane using Markov Chains
+    # Generate a service name using Markov Chains
     # Uses the whole corpus text, tags dict and specifies a max lenght
 
     # 'state_size' defines how many words to look behind to guess the next
@@ -137,10 +137,16 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
 
             log.debug(f"Run #{i}, {max_len=} {len(sentence)=}, {sentence=}")
 
-            if len(sentence) <= max_len:
-                return sentence
-            else:
+            if len(sentence) >= max_len:
+                # Skip if too long
                 continue
+            elif re.search(r"is an? (AWS|Amazon)", sentence):
+                # Skip if the sentence matches "is a/an <aws product>", which
+                # typically makes the sentence go off in another, grammatically
+                # incorrect, direction. e.g. "<a> is a <b> is a ..."
+                continue
+            else:
+                return sentence
 
         except markovify.text.ParamError:
             continue
