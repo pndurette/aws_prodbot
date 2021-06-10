@@ -119,7 +119,7 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
     # Uses the whole corpus text, tags dict and specifies a max lenght
 
     # 'state_size' defines how many words to look behind to guess the next
-    # text_model = POSifiedText(text, state_size=2)
+    #text_model = POSifiedText(corpus, state_size=2)
     text_model = markovify.Text(corpus, state_size=2)
 
     # VBZ: verb, present tense, 3rd person singular
@@ -131,7 +131,8 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
         try:
             # sentence = text_model.make_sentence()
             sentence = text_model.make_sentence_with_start(
-                beginning=start_expression(verbs), strict=False
+                beginning=start_expression(verbs), strict=False,
+                min_words=25
             )
 
             log.debug(f"Run #{i}, {max_len=} {len(sentence)=}, {sentence=}")
@@ -187,10 +188,12 @@ def service_name(names_list, tags_dict):
     # e.g. "CloudWatch" to "Cloud Watch"
     # Only when the next letter isn't a capital or space,
     # so it doesn't split accronyums (e.g. 'EKS')
+    names_list_presplit = names_list.copy()
     names_list = [re.sub(r"([A-Z][^A-Z\s\d])", " \\1", n) for n in names_list]
 
     # Clean up (remove extra staces (join(split)) and remove trail/lead spaces)
     names_list = [" ".join(n.split()).strip() for n in names_list]
+    names_list_presplit = [" ".join(n.split()).strip() for n in names_list_presplit]
 
     # Extract prefix and suffix terms
     prefix_list = []
@@ -200,6 +203,11 @@ def service_name(names_list, tags_dict):
             tokens = n.split()
             prefix_list.append(tokens[0])
             suffix_list.append(tokens[-1])
+
+    for n in names_list_presplit:
+        if re.search(r"\s", n):
+            tokens = n.split()
+            prefix_list.append(tokens[0])
 
     # print(names_list)
 
@@ -216,6 +224,9 @@ def service_name(names_list, tags_dict):
 
     top_prefixes = list(top_prefixes)
     top_suffixes = list(top_suffixes)
+
+    #print(prefix_list)
+    print(top_prefixes)
 
     """
     Service names examples:
