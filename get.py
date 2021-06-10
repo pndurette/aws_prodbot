@@ -10,6 +10,11 @@ from typing import Dict, List
 from bs4 import BeautifulSoup
 from requests import get
 
+# This scripts extracts a list of product items dicts
+# It is used by tweet.py to generate a corpus
+# It only needs to be run to refresh aws.json,
+# which is included in the Docker image
+
 # The numbers of paragrahs of each product page to scrape
 # The more we add, the less relevant it becomes
 PARAGRAPHS = 1
@@ -145,7 +150,12 @@ def get_docs_items() -> List[Dict]:
     ]
 
     for s in services:
-        service = dict()
+        service = {
+            "name": "",
+            "blurb": "",
+            "abbreviation": "",
+            "desc": ""
+        }
 
         # Skip the sections that aren't products per se.
         # Section titles are HTML-escaped
@@ -172,7 +182,7 @@ def get_docs_items() -> List[Dict]:
             continue
 
         # Just a quick way to only query specifc products to test
-        # if name not in ["Crypto Tools"]:
+        # if name not in ["Augmented AI (A2I)"]:
         #     continue
         print(f"Processing {name}...")
 
@@ -326,7 +336,11 @@ def get_docs_items() -> List[Dict]:
             if dt.text.startswith("AWS")
             or dt.text.startswith("Amazon")
             or dt.text.startswith(name)
+            and not len(dt.text.split()) > 4
         ]
+
+        # Clean
+        dts_list = [" ".join(dt.split()) for dt in dts_list]
 
         print(f"    Extra (terms): {dts_list}")
         extra_names += dts_list
