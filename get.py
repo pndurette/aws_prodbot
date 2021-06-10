@@ -182,7 +182,7 @@ def get_docs_items() -> List[Dict]:
             continue
 
         # Just a quick way to only query specifc products to test
-        # if name not in ["Augmented AI (A2I)"]:
+        # if name not in ["Neptune"]:
         #     continue
         print(f"Processing {name}...")
 
@@ -229,6 +229,10 @@ def get_docs_items() -> List[Dict]:
         # Some landing pages don't have descriptions
         service_blurb = service_soup.find("landing-page").abstract.string
         try:
+            # 'blurb' obtained from HTML can have weird encoding
+            # fix: https://stackoverflow.com/a/66815577
+            bytes_blurb = bytes(service["blurb"], encoding="raw_unicode_escape")
+            service["blurb"] = bytes_blurb.decode("utf-8", "strict")
             service["blurb"] = " ".join(service_blurb.split())
         except:
             service["blurb"] = ""
@@ -323,7 +327,10 @@ def get_docs_items() -> List[Dict]:
             if len(clean_p) < 100:
                 continue
             else:
-                service["desc"] = clean_p
+                # 'desc' obtained from HTML can have weird encoding
+                # fix: https://stackoverflow.com/a/66815577
+                bytes_desc = bytes(clean_p, encoding="raw_unicode_escape")
+                service["desc"] = bytes_desc.decode("utf-8", "strict")
                 break
 
         # <dt> elements often contain extra AWS product names!
@@ -385,7 +392,7 @@ def get_page_xml(url) -> str:
 
 def save_items(items, filename) -> None:
     with open(filename, "w") as f:
-        f.write(json.dumps(items, indent=2, separators=(",", ": ")))
+        f.write(json.dumps(items, indent=2, separators=(",", ": "), ensure_ascii=False))
 
 
 if __name__ == "__main__":

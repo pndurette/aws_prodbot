@@ -1,7 +1,7 @@
 [
   {
     "name": "Amazon Elastic Compute Cloud",
-    "blurb": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable computing capacity\u2014literally, servers in Amazon's data centers\u2014that you use to build and host your software systems.",
+    "blurb": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable computing capacity—literally, servers in Amazon's data centers—that you use to build and host your software systems.",
     "abbreviation": "Amazon EC2",
     "desc": "Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic."
   },
@@ -25,7 +25,7 @@
   },
   {
     "name": "EC2 Image Builder",
-    "blurb": "EC2 Image Builder is a fully-managed AWS service that makes it easier to automate the creation, management, and deployment of customized, secure, and up-to-date \u201cgolden\u201d server images that are pre-installed and pre-configured with software and settings to meet specific IT standards.",
+    "blurb": "EC2 Image Builder is a fully-managed AWS service that makes it easier to automate the creation, management, and deployment of customized, secure, and up-to-date “golden” server images that are pre-installed and pre-configured with software and settings to meet specific IT standards.",
     "abbreviation": "EC2 Image Builder",
     "desc": "EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and deployment of customized, secure, and up-to-date server images that are pre-installed and pre-configured with software and settings to meet specific IT standards."
   },
@@ -37,7 +37,7 @@
   },
   {
     "name": "AWS Lambda",
-    "blurb": "With AWS Lambda, you can run code without provisioning or managing servers. You pay only for the compute time that you consume\u2014there\u2019s no charge when your code isn\u2019t running. You can run code for virtually any type of application or backend service\u2014all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.",
+    "blurb": "With AWS Lambda, you can run code without provisioning or managing servers. You pay only for the compute time that you consume—there’s no charge when your code isn’t running. You can run code for virtually any type of application or backend service—all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.",
     "abbreviation": "AWS Lambda",
     "desc": "Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code on a high-availability compute infrastructure and performs all of the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, code monitoring and logging. With Lambda, you can run code for virtually any type of application or backend service. All you need to do is supply your code in one of the languages that Lambda supports."
   },
@@ -139,7 +139,7 @@
   },
   {
     "name": "Amazon FSx",
-    "blurb": "Amazon FSx provides fully managed third-party file systems with the native compatibility and feature sets for workloads such as Microsoft Windows\u2013based storage, high-performance computing, machine learning, and electronic design automation. Amazon FSx supports two file system types: Lustre and Windows File Server.",
+    "blurb": "Amazon FSx provides fully managed third-party file systems with the native compatibility and feature sets for workloads such as Microsoft Windows–based storage, high-performance computing, machine learning, and electronic design automation. Amazon FSx supports two file system types: Lustre and Windows File Server.",
     "abbreviation": "AmazonFSx",
     "desc": "Amazon FSx for Windows File Server provides fully managed Microsoft Windows file servers, backed by a fully native Windows file system. Amazon FSx for Windows File Server has the features, performance, and compatibility to easily lift and shift enterprise applications to the AWS Cloud."
   },
@@ -187,15 +187,15 @@
   },
   {
     "name": "Amazon Keyspaces (for Apache Cassandra)",
-    "blurb": "Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra\u2013compatible database service.",
+    "blurb": "Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service.",
     "abbreviation": "Amazon Keyspaces",
-    "desc": "Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra\u00e2\u0080\u0093compatible database service. With Amazon Keyspaces, you don\u00e2\u0080\u0099t have to provision, patch, or manage servers, and you don\u00e2\u0080\u0099t have to install, maintain, or operate software."
+    "desc": "Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service. With Amazon Keyspaces, you don’t have to provision, patch, or manage servers, and you don’t have to install, maintain, or operate software."
   },
   {
     "name": "Amazon Neptune",
-    "blurb": "Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets. The core of Neptune is a purpose-built, high-performance graph database engine that is optimized for storing billions of relationships and querying the graph with milliseconds latency. Neptune supports the popular graph query languages Apache TinkerPop Gremlin and W3C\u2019s SPARQL, allowing you to build queries that efficiently navigate highly connected datasets. Neptune powers graph use cases such as recommendation engines, fraud detection, knowledge graphs, drug discovery, and network security.",
+    "blurb": "Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets. The core of Neptune is a purpose-built, high-performance graph database engine that is optimized for storing billions of relationships and querying the graph with milliseconds latency. Neptune supports the popular graph query languages Apache TinkerPop Gremlin and W3C’s SPARQL, allowing you to build queries that efficiently navigate highly connected datasets. Neptune powers graph use cases such as recommendation engines, fraud detection, knowledge graphs, drug discovery, and network security.",
     "abbreviation": "Amazon Neptune",
-    "desc": "Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets. The core of Neptune is a purpose-built, high-performance graph database engine. This engine is optimized for storing billions of relationships and querying the graph with milliseconds latency. Neptune supports the popular graph query languages Apache TinkerPop Gremlin and W3C\u00e2\u0080\u0099s SPARQL, enabling you to build queries that efficiently navigate highly connected datasets. Neptune powers graph use cases such as recommendation engines, fraud detection, knowledge graphs, drug discovery, and network security."
+    "desc": "Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets. The core of Neptune is a purpose-built, high-performance graph database engine. This engine is optimized for storing billions of relationships and querying the graph with milliseconds latency. Neptune supports the popular graph query languages Apache TinkerPop Gremlin and W3C’s SPARQL, enabling you to build queries that efficiently navigate highly connected datasets. Neptune powers graph use cases such as recommendation engines, fraud detection, knowledge graphs, drug discovery, and network security."
   },
   {
     "name": "Amazon Quantum Ledger Database",
@@ -219,7 +219,7 @@
     "name": "Amazon Timestream",
     "blurb": "With Amazon Timestream, you can easily store and analyze sensor data for IoT applications, metrics for DevOps use cases, and telemetry for application monitoring scenarios such as clickstream data analysis.",
     "abbreviation": "Amazon Timestream",
-    "desc": "Amazon Timestream is a fast, scalable, fully managed, purpose-built time series database that makes it easy to store and analyze trillions of time series data points per day. Timestream saves you time and cost in managing the lifecycle of time series data by keeping recent data in memory and moving historical data to a cost optimized storage tier based upon user defined policies. Timestream\u00e2\u0080\u0099s purpose-built query engine lets you access and analyze recent and historical data together, without having to specify its location. Amazon Timestream has built-in time series analytics functions, helping you identify trends and patterns in your data in near real-time. Timestream is serverless and automatically scales up or down to adjust capacity and performance. Because you don\u00e2\u0080\u0099t need to manage the underlying infrastructure, you can focus on optimizing and building your applications."
+    "desc": "Amazon Timestream is a fast, scalable, fully managed, purpose-built time series database that makes it easy to store and analyze trillions of time series data points per day. Timestream saves you time and cost in managing the lifecycle of time series data by keeping recent data in memory and moving historical data to a cost optimized storage tier based upon user defined policies. Timestream’s purpose-built query engine lets you access and analyze recent and historical data together, without having to specify its location. Amazon Timestream has built-in time series analytics functions, helping you identify trends and patterns in your data in near real-time. Timestream is serverless and automatically scales up or down to adjust capacity and performance. Because you don’t need to manage the underlying infrastructure, you can focus on optimizing and building your applications."
   },
   {
     "name": "AWS Identity and Access Management",
@@ -235,9 +235,9 @@
   },
   {
     "name": "AWS Audit Manager",
-    "blurb": "AWS Audit Manager helps you continuously audit your AWS usage to simplify how you manage risk and compliance with regulations and industry standards. AWS Audit Manager makes it easier to evaluate whether your policies, procedures, and activities\u2014also known as controls\u2014are operating as intended. The service offers prebuilt frameworks with controls that are mapped to well-known industry standards and regulations, full customization of frameworks and controls, and automated collection and organization of evidence as designed by each control requirement.",
+    "blurb": "AWS Audit Manager helps you continuously audit your AWS usage to simplify how you manage risk and compliance with regulations and industry standards. AWS Audit Manager makes it easier to evaluate whether your policies, procedures, and activities—also known as controls—are operating as intended. The service offers prebuilt frameworks with controls that are mapped to well-known industry standards and regulations, full customization of frameworks and controls, and automated collection and organization of evidence as designed by each control requirement.",
     "abbreviation": "AWS Audit Manager",
-    "desc": "AWS Audit Manager helps you continuously audit your AWS usage to simplify how you manage risk and compliance with regulations and industry standards. Audit Manager automates evidence collection to make it easier to assess whether your policies, procedures, and activities\u00e2\u0080\u0094also known as controls\u00e2\u0080\u0094are operating effectively. When it is time for an audit, Audit Manager helps you manage stakeholder reviews of your controls, which means you can build audit-ready reports with much less manual effort."
+    "desc": "AWS Audit Manager helps you continuously audit your AWS usage to simplify how you manage risk and compliance with regulations and industry standards. Audit Manager automates evidence collection to make it easier to assess whether your policies, procedures, and activities—also known as controls—are operating effectively. When it is time for an audit, Audit Manager helps you manage stakeholder reviews of your controls, which means you can build audit-ready reports with much less manual effort."
   },
   {
     "name": "Amazon Cognito",
@@ -255,7 +255,7 @@
     "name": "AWS Directory Service",
     "blurb": "AWS Directory Service provides multiple ways to set up and run Microsoft Active Directory with other AWS services such as Amazon EC2, Amazon RDS for SQL Server, Amazon FSx for Windows File Server, and AWS Single-Sign On. AWS Directory Service for Microsoft Active Directory, also known as AWS Managed Microsoft AD, enables your directory-aware workloads and AWS resources to use a managed Active Directory in the AWS Cloud.",
     "abbreviation": "AWS Directory Service",
-    "desc": "AWS Directory Service provides multiple ways to use Microsoft Active Directory (AD) with other AWS services. Directories store information about users, groups, and devices, and administrators use them to manage access to information and resources. AWS Directory Service provides multiple directory choices for customers who want to use existing Microsoft AD or Lightweight Directory Access Protocol (LDAP)\u00e2\u0080\u0093aware applications in the cloud. It also offers those same choices to developers who need a directory to manage users, groups, devices, and access."
+    "desc": "AWS Directory Service provides multiple ways to use Microsoft Active Directory (AD) with other AWS services. Directories store information about users, groups, and devices, and administrators use them to manage access to information and resources. AWS Directory Service provides multiple directory choices for customers who want to use existing Microsoft AD or Lightweight Directory Access Protocol (LDAP)–aware applications in the cloud. It also offers those same choices to developers who need a directory to manage users, groups, devices, and access."
   },
   {
     "name": "AWS Firewall Manager",
@@ -297,7 +297,7 @@
     "name": "AWS Resource Access Manager",
     "blurb": "AWS Resource Access Manager (AWS RAM) enables you to share your resources with any AWS account or organization in AWS Organizations. Customers who operate multiple accounts can create resources centrally and use AWS RAM to share them with all of their accounts to reduce operational overhead. AWS RAM is available at no additional charge.",
     "abbreviation": "AWS RAM",
-    "desc": "AWS Resource Access Manager (AWS RAM) lets you share your resources with any AWS account or through AWS Organizations. If you have multiple AWS accounts, you can create resources centrally and use AWS RAM to share those resources with other accounts."
+    "desc": "AWS Resource Access Manager (AWS RAM) lets you share your resources with an organization or organizational units (OUs) in AWS Organizations, and AWS accounts. For supported resource types, you can also share resources with IAM roles and IAM users. If you have multiple AWS accounts, you can use AWS RAM to share those resources with other accounts."
   },
   {
     "name": "AWS Resource Groups and Tag Editor",
@@ -397,7 +397,7 @@
   },
   {
     "name": "Amazon Comprehend",
-    "blurb": "Amazon Comprehend uses natural language processing (NLP) to extract insights about the content of documents without the need of any special preprocessing. Amazon Comprehend processes any text files in UTF-8 format. It develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document. Use Amazon Comprehend to create new products based on understanding the structure of documents. With Amazon Comprehend you can search social networking feeds for mentions of products, scan an entire document repository for key phrases, or determine the topics contained in a set of documents. To extract insights from clinical documents such as doctor\u2019s notes or clinical trial reports, use Amazon Comprehend Medical.",
+    "blurb": "Amazon Comprehend uses natural language processing (NLP) to extract insights about the content of documents without the need of any special preprocessing. Amazon Comprehend processes any text files in UTF-8 format. It develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document. Use Amazon Comprehend to create new products based on understanding the structure of documents. With Amazon Comprehend you can search social networking feeds for mentions of products, scan an entire document repository for key phrases, or determine the topics contained in a set of documents. To extract insights from clinical documents such as doctor’s notes or clinical trial reports, use Amazon Comprehend Medical.",
     "abbreviation": "Amazon Comprehend",
     "desc": "To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions."
   },
@@ -453,13 +453,13 @@
     "name": "Amazon Lookout for Metrics",
     "blurb": "Amazon Lookout for Metrics is a machine learning service that helps you continuously find anomalies in business and operational data based on the same technology used by Amazon.com. With Amazon Lookout for Metrics, no machine learning experience is required.",
     "abbreviation": "Amazon Lookout for Metrics",
-    "desc": "Amazon Lookout for Metrics is a service that finds anomalies in your data, determines their root causes, and enables you to quickly take action. Built from the same technology used by Amazon.com, Amazon Lookout for Metrics re\u00ef\u00ac\u0082ects 20 years of expertise in anomaly detection and machine learning."
+    "desc": "Amazon Lookout for Metrics is a service that finds anomalies in your data, determines their root causes, and enables you to quickly take action. Built from the same technology used by Amazon.com, Amazon Lookout for Metrics reﬂects 20 years of expertise in anomaly detection and machine learning."
   },
   {
     "name": "Amazon Lookout for Vision",
-    "blurb": "Amazon Lookout for Vision enables you to find visual defects in industrial products, accurately and at scale. It uses computer vision to identify missing components in an industrial product, damage to vehicles or structures, irregularities in production lines, and even minuscule defects in silicon wafers \u2014 or any other physical item where quality is important such as a missing capacitor on printed circuit boards.",
+    "blurb": "Amazon Lookout for Vision enables you to find visual defects in industrial products, accurately and at scale. It uses computer vision to identify missing components in an industrial product, damage to vehicles or structures, irregularities in production lines, and even minuscule defects in silicon wafers — or any other physical item where quality is important such as a missing capacitor on printed circuit boards.",
     "abbreviation": "Amazon Lookout for Vision",
-    "desc": "You can use Amazon Lookout for Vision to find visual defects in industrial products, accurately and at scale. It uses computer vision to identify missing components in an industrial product, damage to vehicles or structures, irregularities in production lines, and even minuscule defects in silicon wafers\u00e2\u0080\u0094or any other physical item where quality is important such as a missing capacitor on printed circuit boards."
+    "desc": "You can use Amazon Lookout for Vision to find visual defects in industrial products, accurately and at scale. It uses computer vision to identify missing components in an industrial product, damage to vehicles or structures, irregularities in production lines, and even minuscule defects in silicon wafers—or any other physical item where quality is important such as a missing capacitor on printed circuit boards."
   },
   {
     "name": "Amazon Monitron",
@@ -483,7 +483,7 @@
     "name": "Amazon Polly",
     "blurb": "Amazon Polly is a Text-to-Speech (TTS) cloud service that converts text into lifelike speech. You can use Amazon Polly to develop applications that increase engagement and accessibility. Amazon Polly supports multiple languages and includes a variety of lifelike voices, so you can build speech-enabled applications that work in multiple locations and use the ideal voice for your customers.",
     "abbreviation": "Amazon Polly",
-    "desc": "Amazon Polly is a cloud service that converts text into lifelike speech. You can use Amazon Polly to develop applications that increase engagement and accessibility. Amazon Polly supports multiple languages and includes a variety of lifelike voices, so you can build speech-enabled applications that work in multiple locations and use the ideal voice for your customers. With Amazon Polly, you only pay for the text you synthesize. You can also cache and replay Amazon Polly\u00e2\u0080\u0099s generated speech at no additional cost."
+    "desc": "Amazon Polly is a cloud service that converts text into lifelike speech. You can use Amazon Polly to develop applications that increase engagement and accessibility. Amazon Polly supports multiple languages and includes a variety of lifelike voices, so you can build speech-enabled applications that work in multiple locations and use the ideal voice for your customers. With Amazon Polly, you only pay for the text you synthesize. You can also cache and replay Amazon Polly’s generated speech at no additional cost."
   },
   {
     "name": "Amazon Rekognition",
@@ -691,7 +691,7 @@
   },
   {
     "name": "AWS Tools for PowerShell",
-    "blurb": "AWS Tools for PowerShell and AWS Tools for PowerShell Core are PowerShell modules, built on functionality exposed by the AWS SDK for .NET, that enable you to script operations on AWS resources from the PowerShell command line. Although you use the SDK\u2019s service clients and methods to implement the cmdlets, the cmdlets give you a PowerShell experience to specify parameters and handle results. For example, the cmdlets in both modules support PowerShell pipelining to pipe PowerShell objects to and from the cmdlets.",
+    "blurb": "AWS Tools for PowerShell and AWS Tools for PowerShell Core are PowerShell modules, built on functionality exposed by the AWS SDK for .NET, that enable you to script operations on AWS resources from the PowerShell command line. Although you use the SDK’s service clients and methods to implement the cmdlets, the cmdlets give you a PowerShell experience to specify parameters and handle results. For example, the cmdlets in both modules support PowerShell pipelining to pipe PowerShell objects to and from the cmdlets.",
     "abbreviation": "AWS Tools for PowerShell",
     "desc": "The AWS Tools for PowerShell are a set of PowerShell modules that are built on the functionality exposed by the AWS SDK for .NET. The AWS Tools for PowerShell enable you to script operations on your AWS resources from the PowerShell command line."
   },
@@ -783,7 +783,7 @@
     "name": "AWS Application Migration Service",
     "blurb": "AWS Application Migration Service (MGN) is a highly automated lift-and-shift solution that simplifies and expedites migration to AWS.",
     "abbreviation": "AWS Application Migration Service ",
-    "desc": "AWS Application Migration Service (MGN) is a highly automated lift-and-shift (rehost) solution that simplifies, expedites, and reduces the cost of migrating applications to AWS. It enables companies to lift-and-shift a large number of physical, virtual, or cloud servers without compatibility issues, performance disruption, or long cutover windows. MGN replicates source servers into your AWS account. When you\u00e2\u0080\u0099re ready, it automatically converts and launches your servers on AWS so you can quickly benefit from the cost savings, productivity, resilience, and agility of the Cloud. Once your applications are running on AWS, you can leverage AWS services and capabilities to quickly and easily replatform or refactor those applications \u00e2\u0080\u0093 which makes lift-and-shift a fast route to modernization."
+    "desc": "AWS Application Migration Service (MGN) is a highly automated lift-and-shift (rehost) solution that simplifies, expedites, and reduces the cost of migrating applications to AWS. It enables companies to lift-and-shift a large number of physical, virtual, or cloud servers without compatibility issues, performance disruption, or long cutover windows. MGN replicates source servers into your AWS account. When you’re ready, it automatically converts and launches your servers on AWS so you can quickly benefit from the cost savings, productivity, resilience, and agility of the Cloud. Once your applications are running on AWS, you can leverage AWS services and capabilities to quickly and easily replatform or refactor those applications – which makes lift-and-shift a fast route to modernization."
   },
   {
     "name": "AWS Database Migration Service",
@@ -823,7 +823,7 @@
   },
   {
     "name": "Amazon API Gateway",
-    "blurb": "Amazon API Gateway enables you to create and deploy your own REST and WebSocket APIs at any scale. You can create robust, secure, and scalable APIs that access AWS or other web services, as well as data that\u2019s stored in the AWS Cloud. You can create APIs to use in your own client applications, or you can make your APIs available to third-party app developers.",
+    "blurb": "Amazon API Gateway enables you to create and deploy your own REST and WebSocket APIs at any scale. You can create robust, secure, and scalable APIs that access AWS or other web services, as well as data that’s stored in the AWS Cloud. You can create APIs to use in your own client applications, or you can make your APIs available to third-party app developers.",
     "abbreviation": "Amazon API Gateway",
     "desc": "Amazon API Gateway is an AWS service for creating, publishing, maintaining, monitoring, and securing REST, HTTP, and WebSocket APIs at any scale. API developers can create APIs that access AWS or other web services, as well as data stored in the AWS Cloud. As an API Gateway API developer, you can create APIs for use in your own client applications. Or you can make your APIs available to third-party app developers. For more information, see Who uses API Gateway?."
   },
@@ -1143,7 +1143,7 @@
     "name": "AWS Glue",
     "blurb": "AWS Glue is a serverless data-preparation service for extract, transform, and load (ETL) operations. It makes it easy for data engineers, data analysts, data scientists, and ETL developers to extract, clean, enrich, normalize, and load data. AWS Glue reduces the time it takes to start analyzing your data from months to minutes. It provides you with both visual and code-based interfaces to make data preparation easy. Data engineers and ETL developers can use AWS Glue Studio to create, run, and monitor ETL jobs with a few clicks. Data analysts and data scientists can use AWS Glue DataBrew to visually clean up and normalize data without writing code.",
     "abbreviation": "AWS Glue",
-    "desc": "AWS Glue is a fully managed ETL (extract, transform, and load) service that makes it simple and cost-effective to categorize your data, clean it, enrich it, and move it reliably between various data stores and data streams. AWS Glue consists of a central metadata repository known as the AWS Glue Data Catalog, an ETL engine that automatically generates Python or Scala code, and a flexible scheduler that handles dependency resolution, job monitoring, and retries. AWS Glue is serverless, so there\u00e2\u0080\u0099s no infrastructure to set up or manage."
+    "desc": "AWS Glue is a fully managed ETL (extract, transform, and load) service that makes it simple and cost-effective to categorize your data, clean it, enrich it, and move it reliably between various data stores and data streams. AWS Glue consists of a central metadata repository known as the AWS Glue Data Catalog, an ETL engine that automatically generates Python or Scala code, and a flexible scheduler that handles dependency resolution, job monitoring, and retries. AWS Glue is serverless, so there’s no infrastructure to set up or manage."
   },
   {
     "name": "Amazon Kinesis",
@@ -1197,7 +1197,7 @@
     "name": "AWS Step Functions",
     "blurb": "AWS Step Functions makes it easy to coordinate the components of distributed applications as a series of steps in a visual workflow. You can quickly build and run state machines to execute the steps of your application in a reliable and scalable fashion.",
     "abbreviation": "AWS Step Functions",
-    "desc": "Step Functions is a serverless orchestration service that lets you combine AWS Lambda functions and other AWS services to build business-critical applications. Through Step Functions' graphical console, you see your application\u00e2\u0080\u0099s workflow as a series of event-driven steps."
+    "desc": "Step Functions is a serverless orchestration service that lets you combine AWS Lambda functions and other AWS services to build business-critical applications. Through Step Functions' graphical console, you see your application’s workflow as a series of event-driven steps."
   },
   {
     "name": "Amazon Simple Workflow Service",
@@ -1225,9 +1225,9 @@
   },
   {
     "name": "Amazon Honeycode",
-    "blurb": "Amazon Honeycode is a fully managed service that allows you to quickly build mobile and web apps for teams\u2014without programming. Build Honeycode apps for managing almost anything, like projects, customers, operations, approvals, resources, and even your team.",
+    "blurb": "Amazon Honeycode is a fully managed service that allows you to quickly build mobile and web apps for teams—without programming. Build Honeycode apps for managing almost anything, like projects, customers, operations, approvals, resources, and even your team.",
     "abbreviation": "Amazon Honeycode",
-    "desc": "Amazon Honeycode is a fully managed service that allows you to quickly build mobile and web apps for teams\u00e2\u0080\u0094without programming. Build Amazon Honeycode apps for managing almost anything, like projects, customers, operations, approvals, resources, and even your team."
+    "desc": "Amazon Honeycode is a fully managed service that allows you to quickly build mobile and web apps for teams—without programming. Build Amazon Honeycode apps for managing almost anything, like projects, customers, operations, approvals, resources, and even your team."
   },
   {
     "name": "Amazon Simple Email Service",
@@ -1297,7 +1297,7 @@
   },
   {
     "name": "Amazon Lumberyard (beta)",
-    "blurb": "Lumberyard is a free AAA game engine deeply integrated with AWS and Twitch\u2014with full source. Lumberyard provides a growing set of tools to help you create the highest quality games, engage massive communities of fans, and connect games to the vast compute and storage of the cloud. Participate in the forums or learn about new changes on our blog.",
+    "blurb": "Lumberyard is a free AAA game engine deeply integrated with AWS and Twitch—with full source. Lumberyard provides a growing set of tools to help you create the highest quality games, engage massive communities of fans, and connect games to the vast compute and storage of the cloud. Participate in the forums or learn about new changes on our blog.",
     "abbreviation": "Amazon Lumberyard",
     "desc": "Amazon Lumberyard is a free high-performance 3D engine with a professional suite of tools, editors, and libraries that enable you to create captivating real-time graphics, immersive experiences, awe-inspiring virtual worlds, and dynamic visualizations. Lumberyard brings the capabilities of Amazon Web Services and the community of Twitch to connect your ideas to players, customers, and viewers around the world."
   },
@@ -1326,151 +1326,7 @@
     "desc": "Savings Plans offer a flexible pricing model that provides savings on AWS usage. You can save up to 72 percent on your AWS compute workloads. Compute Savings Plans provide lower prices on Amazon EC2 instance usage regardless of instance family, size, OS, tenancy, or AWS Region. This also applies to AWS Fargate and AWS Lambda usage. SageMaker Savings Plans provide you with lower prices for your Amazon SageMaker instance usage, regardless of your instance family, size, component, or AWS Region."
   },
   {
-    "name": "AWS Management Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
     "name": "AWS Command Line Interface (AWS CLI)",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Command Line Interface (CLI)",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Systems Manager pricing",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "GuardDuty Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon Inspector Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS command line tools",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Projects",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon S3",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS IoT Analytics Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Directory Service for Microsoft Active Directory",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker JumpStart",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS IoT Device SDKs",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Model Registry",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Clarify",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Neo",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker ML Lineage Tracking",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Edge Manager",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon Inspector HTTPS API",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Debugger",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS OpsWorks Stacks",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS IAM",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS CLI",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "GuardDuty HTTPS API",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Model Monitor",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1482,19 +1338,7 @@
     "desc": ""
   },
   {
-    "name": "AWS IoT API",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS OpsWorks for Chef Automate",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Secrets Manager HTTPS Query API",
+    "name": "AWS Key Management Service (AWS KMS)",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1506,13 +1350,85 @@
     "desc": ""
   },
   {
+    "name": "SageMaker Experiments",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
     "name": "AWS Organizations HTTPS Query API",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "AWS Command Line Tools",
+    "name": "SageMaker Projects",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Neo",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "GuardDuty HTTPS API",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Model Registry",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS IoT Device SDKs",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Debugger",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS IoT Analytics Console",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon S3",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS CLI",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Directory Service for Microsoft Active Directory",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Model Monitor",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Elastic Inference",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1524,43 +1440,49 @@
     "desc": ""
   },
   {
-    "name": "SageMaker Studio",
+    "name": "AWS Command Line Interface (CLI)",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "SageMaker Data Wrangler",
+    "name": "SageMaker JumpStart",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "AWS Key Management Service (AWS KMS)",
+    "name": "Lambda extensions",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "AWS SDKs",
+    "name": "AWS Command Line Tools",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "AWS Budgets",
+    "name": "AWS OpsWorks Stacks",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "AWS RAM Console",
+    "name": "AWS Organizations (Consolidated Billing)",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
     "name": "SageMaker Model Building Pipelines",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS OpsWorks for Puppet Enterprise",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1578,7 +1500,25 @@
     "desc": ""
   },
   {
-    "name": "AWS Organizations (Consolidated Billing)",
+    "name": "AWS OpsWorks for Chef Automate",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Edge Manager",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Systems Manager pricing",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Management Console",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1590,31 +1530,85 @@
     "desc": ""
   },
   {
-    "name": "Lambda extensions",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Elastic Inference",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS OpsWorks for Puppet Enterprise",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Experiments",
+    "name": "AWS RAM Console",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
     "name": "SageMaker Feature Store",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS SDKs",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Data Wrangler",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Clarify",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon Inspector Console",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "GuardDuty Console",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Budgets",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon Inspector HTTPS API",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS IAM",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Studio",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker ML Lineage Tracking",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS IoT API",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS command line tools",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
