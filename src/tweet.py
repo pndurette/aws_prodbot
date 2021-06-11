@@ -98,7 +98,7 @@ def start_expression(verbs: List) -> str:
     # Generate the start of service description (after the namer),
     # to ease Markov Chains completion
     # i.e. is a|is an|<a verb>
-    exps = ["is a", "is an", random.choice(verbs)]
+    exps = ["is a", "is an", random.choice(verbs).lower()]
     exps_weights = [40, 20, 40]
     return random.choices(population=exps, weights=exps_weights)[0]
 
@@ -154,7 +154,7 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
         break
 
 
-def service_accronym(name: str) -> str:
+def service_acronym(name: str) -> str:
     # Capital letters as list
     # e.g. "ThisThat Thing" to ['T', 'T', 'T']
     initials_list = re.findall(r"[A-Z]", name)
@@ -170,18 +170,17 @@ def service_accronym(name: str) -> str:
     # <letter> if number == 1
     # e.g. [['T', 2], ['A', 1]]
     #  to: ['T2', 'A']
-    accronym_list = [f"{i[0]}{i[1]}" if i[1]>1 else i[0] for i in letter_groups]
+    acronym_list = [f"{i[0]}{i[1]}" if i[1]>1 else i[0] for i in letter_groups]
 
     # Join!
     # e.g. "T2A"
-    accronym = ''.join(accronym_list)
+    acronym = ''.join(acronym_list)
 
-    # Reject accronym if not between 2 and 4 inclusive
-    if not 2 <= len(accronym) <= 4:
+    # Reject acronym if not between 2 and 4 inclusive
+    if not 2 <= len(acronym) <= 4:
         return ''
-
-    # Add parentheses
-    return f"({accronym})"
+    else:
+        return acronym
 
 
 def service_name(names_list, tags_dict):
@@ -329,17 +328,23 @@ def service_name(names_list, tags_dict):
     ]
     suffix = random.choices(suffix_exps, suffix_weights)[0]
 
-    # Accronym
-    accronym_str = " ".join(prefix + middle_name + suffix)
-    accronym_exps = [
-        "",  # No accronym
-        service_accronym(accronym_str),
+    # acronym
+    acronym_str = " ".join(
+        # Do a title() on the seperate expressions only for the acronym, so:
+        # * capitals in the middle of words don't count (e.g. IoT, API)
+        prefix.title()
+        # * fused words still get their accronyms (e.g. 'Testcase' is 'TC')
+        + f"{middle_name_a} {middle_name_b}".title()
+        + suffix)
+    acronym_exps = [
+        "",  # No acronym
+        service_acronym(acronym_str),
     ]
-    accronym_weights = [
+    acronym_weights = [
         15,
         85,
     ]
-    accronym = random.choices(accronym_exps, accronym_weights)[0]
+    acronym = random.choices(acronym_exps, acronym_weights)[0]
 
     # Purpose
     # e.g. "for <something>"
@@ -359,7 +364,8 @@ def service_name(names_list, tags_dict):
     name.append(prefix)
     name.append(middle_name)
     name.append(suffix)
-    name.append(accronym)
+    if acronym:
+        name.append(f"({acronym})")
     name.append(purpose)
 
     log.debug(f"{name=}")
@@ -372,7 +378,24 @@ def service_name(names_list, tags_dict):
     log.debug(f"{name=}")
     log.debug(f"{len(name_str)=}, {name_str=}")
 
-    return name_str
+    # Build abbreviation, if an accronym exists
+    abbrev = []
+    if acronym:
+        abbrev.append(brand)
+        abbrev.append(acronym)
+        abbrev.append(purpose)
+
+    log.debug(f"{abbrev=}")
+    # Clean (strip and remove empty tokens)
+    abbrev = [n.strip() for n in abbrev if len(n) > 0]
+
+    # Join into a single string
+    abbrev_str = " ".join(abbrev)
+
+    log.debug(f"{abbrev=}")
+    log.debug(f"{len(abbrev)=}, {abbrev=}")
+
+    return name_str, abbrev_str
 
 
 def _capitalize(str):
@@ -385,8 +408,14 @@ def _capitalize(str):
         return str[0].upper() + str[1:]
 
 
-def tweet_intro(service_name: str) -> str:
-    tweet_intro = f"Introducing {service_name}™\n\n{service_name} "
+def tweet_intro(name: str, abbrev: str) -> str:
+    line1 = f"Introducing {name}™"
+    if abbrev:
+        line2 = f"{abbrev}"
+    else:
+        line2 = f"{name}"
+
+    tweet_intro = f"{line1}\n\n{line2}"
     log.debug(f"{len(tweet_intro)=}, {tweet_intro=}")
     return tweet_intro
 
@@ -430,11 +459,11 @@ def main(aws_json_file):
     existing_names = [i["name"] for i in items]
 
     for _ in range(1):
-        # Service name
-        name = service_name(existing_names, tags_dict)
+        # Service name, abbreviation
+        name_str, abbrev_str = service_name(existing_names, tags_dict)
 
         # Tweet intro
-        intro = tweet_intro(name)
+        intro = tweet_intro(name_str, abbrev_str)
 
         # Space left for service description
         desc_max_len = 280 - len(intro)
@@ -443,7 +472,7 @@ def main(aws_json_file):
         desc = service_desc(corpus, tags_dict, desc_max_len)
 
         # Tweet
-        send_tweet(f"{intro}{desc}")
+        send_tweet(f"{intro} {desc}")
 
     # import pprint
     # pprint.pprint(tags_dict)
