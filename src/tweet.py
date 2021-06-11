@@ -6,6 +6,7 @@ import random
 import re
 import sys
 from collections import defaultdict
+from itertools import groupby
 from typing import Dict, List, Tuple
 
 import markovify
@@ -132,7 +133,7 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
             # sentence = text_model.make_sentence()
             sentence = text_model.make_sentence_with_start(
                 beginning=start_expression(verbs), strict=False,
-                min_words=25
+                min_words=20
             )
 
             log.debug(f"Run #{i}, {max_len=} {len(sentence)=}, {sentence=}")
@@ -151,6 +152,36 @@ def service_desc(corpus: str, tags_dict: Dict, max_len: int):
         except markovify.text.ParamError:
             continue
         break
+
+
+def service_accronym(name: str) -> str:
+    # Capital letters as list
+    # e.g. "ThisThat Thing" to ['T', 'T', 'T']
+    initials_list = re.findall(r"[A-Z]", name)
+
+    # Count consecutive letters
+    # https://stackoverflow.com/a/13211561
+    # e.g. ['T', 'T', 'A']
+    #  to: [['T', 2], ['A', 1]]
+    letter_groups = [[k, len(list(g))] for k, g in groupby(initials_list)]
+
+    # Transform the above list, for each item:
+    # <letter><number> if number > 1
+    # <letter> if number == 1
+    # e.g. [['T', 2], ['A', 1]]
+    #  to: ['T2', 'A']
+    accronym_list = [f"{i[0]}{i[1]}" if i[1]>1 else i[0] for i in letter_groups]
+
+    # Join!
+    # e.g. "T2A"
+    accronym = ''.join(accronym_list)
+
+    # Reject accronym if not between 2 and 4 inclusive
+    if not 2 <= len(accronym) <= 4:
+        return ''
+
+    # Add parentheses
+    return f"({accronym})"
 
 
 def service_name(names_list, tags_dict):
@@ -226,13 +257,13 @@ def service_name(names_list, tags_dict):
     # in order of frequency, keep the most common words
     # (nb: there's less really frequent suffixes)
     top_prefixes, _ = zip(*prefix_fdist.most_common(12))
-    top_suffixes, _ = zip(*suffix_fdist.most_common(8))
+    top_suffixes, _ = zip(*suffix_fdist.most_common(10))
 
     top_prefixes = list(top_prefixes)
     top_suffixes = list(top_suffixes)
 
-    #print(prefix_list)
-    print(top_prefixes)
+    print(f"{top_prefixes=}")
+    print(f"{top_suffixes=}")
 
     """
     Service names examples:
@@ -298,6 +329,18 @@ def service_name(names_list, tags_dict):
     ]
     suffix = random.choices(suffix_exps, suffix_weights)[0]
 
+    # Accronym
+    accronym_str = " ".join(prefix + middle_name + suffix)
+    accronym_exps = [
+        "",  # No accronym
+        service_accronym(accronym_str),
+    ]
+    accronym_weights = [
+        15,
+        85,
+    ]
+    accronym = random.choices(accronym_exps, accronym_weights)[0]
+
     # Purpose
     # e.g. "for <something>"
     purpose_exps = [
@@ -316,6 +359,7 @@ def service_name(names_list, tags_dict):
     name.append(prefix)
     name.append(middle_name)
     name.append(suffix)
+    name.append(accronym)
     name.append(purpose)
 
     log.debug(f"{name=}")
