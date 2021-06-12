@@ -159,6 +159,10 @@ def service_acronym(name: str) -> str:
     # e.g. "ThisThat Thing" to ['T', 'T', 'T']
     initials_list = re.findall(r"[A-Z]", name)
 
+    # Don't create an acronym if two letters or less.
+    if len(initials_list) <= 2:
+        return ''
+
     # Count consecutive letters
     # https://stackoverflow.com/a/13211561
     # e.g. ['T', 'T', 'A']
