@@ -37,7 +37,7 @@
   },
   {
     "name": "AWS Lambda",
-    "blurb": "With AWS Lambda, you can run code without provisioning or managing servers. You pay only for the compute time that you consume—there’s no charge when your code isn’t running. You can run code for virtually any type of application or backend service—all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.",
+    "blurb": "With AWS Lambda, you can run code without provisioning or managing servers. You pay only for the compute time that you consume—there's no charge when your code isn't running. You can run code for virtually any type of application or backend service—all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.",
     "abbreviation": "AWS Lambda",
     "desc": "Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code on a high-availability compute infrastructure and performs all of the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, code monitoring and logging. With Lambda, you can run code for virtually any type of application or backend service. All you need to do is supply your code in one of the languages that Lambda supports."
   },
@@ -222,7 +222,7 @@
     "desc": "Amazon Timestream is a fast, scalable, fully managed, purpose-built time series database that makes it easy to store and analyze trillions of time series data points per day. Timestream saves you time and cost in managing the lifecycle of time series data by keeping recent data in memory and moving historical data to a cost optimized storage tier based upon user defined policies. Timestream’s purpose-built query engine lets you access and analyze recent and historical data together, without having to specify its location. Amazon Timestream has built-in time series analytics functions, helping you identify trends and patterns in your data in near real-time. Timestream is serverless and automatically scales up or down to adjust capacity and performance. Because you don’t need to manage the underlying infrastructure, you can focus on optimizing and building your applications."
   },
   {
-    "name": "AWS Identity and Access Management",
+    "name": "AWS Identity and Access Management ",
     "blurb": "AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources users and applications can access.",
     "abbreviation": "AWS Identity and Access Management",
     "desc": "AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources."
@@ -253,7 +253,7 @@
   },
   {
     "name": "AWS Directory Service",
-    "blurb": "AWS Directory Service provides multiple ways to set up and run Microsoft Active Directory with other AWS services such as Amazon EC2, Amazon RDS for SQL Server, Amazon FSx for Windows File Server, and AWS Single-Sign On. AWS Directory Service for Microsoft Active Directory, also known as AWS Managed Microsoft AD, enables your directory-aware workloads and AWS resources to use a managed Active Directory in the AWS Cloud.",
+    "blurb": "AWS Directory Service provides multiple ways to set up and run Microsoft Active Directory with other AWS services such as Amazon EC2, Amazon RDS for SQL Server, Amazon FSx for Windows File Server, and AWS Single Sign-On. AWS Directory Service for Microsoft Active Directory, also known as AWS Managed Microsoft AD, enables your directory-aware workloads and AWS resources to use a managed Active Directory in the AWS Cloud.",
     "abbreviation": "AWS Directory Service",
     "desc": "AWS Directory Service provides multiple ways to use Microsoft Active Directory (AD) with other AWS services. Directories store information about users, groups, and devices, and administrators use them to manage access to information and resources. AWS Directory Service provides multiple directory choices for customers who want to use existing Microsoft AD or Lightweight Directory Access Protocol (LDAP)–aware applications in the cloud. It also offers those same choices to developers who need a directory to manage users, groups, devices, and access."
   },
@@ -261,7 +261,7 @@
     "name": "AWS Firewall Manager",
     "blurb": "AWS Firewall Manager simplifies your AWS WAF administration and maintenance tasks across multiple accounts and resources. With AWS Firewall Manager, you set up your firewall rules just once. The service automatically applies your rules across your accounts and resources, even as you add new resources.",
     "abbreviation": "AWS Firewall Manager",
-    "desc": "AWS Firewall Manager simplifies your administration and maintenance tasks across multiple accounts and resources for a variety of protections, including AWS WAF, AWS Shield Advanced, Amazon VPC security groups, AWS Network Firewall, and Route 53 Resolver DNS Firewall. With Firewall Manager, you set up your protections just once and the service automatically applies them across your accounts and resources, even as you add new resources."
+    "desc": "AWS Firewall Manager simplifies your administration and maintenance tasks across multiple accounts and resources for a variety of protections, including AWS WAF, AWS Shield Advanced, Amazon VPC security groups, AWS Network Firewall, and Amazon Route 53 Resolver DNS Firewall. With Firewall Manager, you set up your protections just once and the service automatically applies them across your accounts and resources, even as you add new resources."
   },
   {
     "name": "Amazon Cloud Directory",
@@ -295,8 +295,8 @@
   },
   {
     "name": "AWS Resource Access Manager",
-    "blurb": "AWS Resource Access Manager (AWS RAM) enables you to share your resources with any AWS account or organization in AWS Organizations. Customers who operate multiple accounts can create resources centrally and use AWS RAM to share them with all of their accounts to reduce operational overhead. AWS RAM is available at no additional charge.",
-    "abbreviation": "AWS RAM",
+    "blurb": "AWS Resource Access Manager (AWS RAM) helps you securely share your resources across AWS accounts and within your organization or organizational units (OUs) in AWS Organizations. For supported resource types, you can also share resources with AWS Identity and Access Management (IAM) roles and IAM users. To reduce operational overhead in a multi-account environment, you can create a resource once and use AWS RAM to share that resource across accounts.",
+    "abbreviation": "AWS Resource Access Manager",
     "desc": "AWS Resource Access Manager (AWS RAM) lets you share your resources with an organization or organizational units (OUs) in AWS Organizations, and AWS accounts. For supported resource types, you can also share resources with IAM roles and IAM users. If you have multiple AWS accounts, you can use AWS RAM to share those resources with other accounts."
   },
   {
@@ -349,7 +349,7 @@
   },
   {
     "name": "AWS Key Management Service",
-    "blurb": "AWS Key Management Service (KMS) is an encryption and key management service scaled for the cloud. KMS keys and functionality are used by other AWS services, and you can use them to protect data in your own applications that use AWS.",
+    "blurb": "AWS Key Management Service (AWS KMS) is an encryption and key management service scaled for the cloud. AWS KMS keys and functionality are used by other AWS services, and you can use them to protect data in your own applications that use AWS.",
     "abbreviation": "AWS KMS",
     "desc": "AWS Key Management Service (AWS KMS) is a managed service that makes it easy for you to create and control customer master keys (CMKs), the encryption keys used to encrypt your data. AWS KMS CMKs are protected by hardware security modules (HSMs) that are validated by the FIPS 140-2 Cryptographic Module Validation Program except in the China (Beijing) and China (Ningxia) Regions."
   },
@@ -399,7 +399,7 @@
     "name": "Amazon Comprehend",
     "blurb": "Amazon Comprehend uses natural language processing (NLP) to extract insights about the content of documents without the need of any special preprocessing. Amazon Comprehend processes any text files in UTF-8 format. It develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document. Use Amazon Comprehend to create new products based on understanding the structure of documents. With Amazon Comprehend you can search social networking feeds for mentions of products, scan an entire document repository for key phrases, or determine the topics contained in a set of documents. To extract insights from clinical documents such as doctor’s notes or clinical trial reports, use Amazon Comprehend Medical.",
     "abbreviation": "Amazon Comprehend",
-    "desc": "To use the AWS Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions."
+    "desc": "To use the Amazon Web Services Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions."
   },
   {
     "name": "Amazon DevOps Guru",
@@ -583,7 +583,7 @@
   },
   {
     "name": "AWS CloudTrail",
-    "blurb": "With AWS CloudTrail, you can monitor your AWS deployments in the cloud by getting a history of AWS API calls for your account, including API calls made via the AWS Management Console, the AWS SDKs, the command line tools, and higher-level AWS services. You can also identify which users and accounts called AWS APIs for services that support CloudTrail, the source IP address the calls were made from, and when the calls occurred. You can integrate CloudTrail into applications using the API, automate trail creation for your organization, check the status of your trails, and control how administrators turn CloudTrail logging on and off.",
+    "blurb": "With AWS CloudTrail, you can monitor your AWS deployments in the cloud by getting a history of AWS API calls for your account, including API calls made by using the AWS Management Console, the AWS SDKs, the command line tools, and higher-level AWS services. You can also identify which users and accounts called AWS APIs for services that support CloudTrail, the source IP address from which the calls were made, and when the calls occurred. You can integrate CloudTrail into applications using the API, automate trail creation for your organization, check the status of your trails, and control how administrators turn CloudTrail logging on and off.",
     "abbreviation": "AWS CloudTrail",
     "desc": "AWS CloudTrail is an AWS service that helps you enable governance, compliance, and operational and risk auditing of your AWS account. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface, and AWS SDKs and APIs."
   },
@@ -637,7 +637,7 @@
   },
   {
     "name": "AWS License Manager",
-    "blurb": "AWS License Manager streamlines the process of bringing software vendor licenses to the cloud. As you build out cloud infrastructure on AWS, you can save costs by using bring-your-own-license (BYOL) opportunities, that is, by repurposing your existing license inventory for use with cloud resources. License Manager reduces the risk of licensing overages and penalties with inventory tracking that is tied directly into AWS services.",
+    "blurb": "AWS License Manager streamlines the process of bringing software vendor licenses to the AWS Cloud. As you build out cloud infrastructure on AWS, you can save costs by repurposing your existing license inventory for use with cloud resources. License Manager reduces the risk of licensing overages and penalties with inventory tracking that is tied directly to AWS resources.",
     "abbreviation": "AWS License Manager",
     "desc": "AWS License Manager is a service that makes it easier for you to manage your software licenses from software vendors (for example, Microsoft, SAP, Oracle, and IBM) centrally across AWS and your on-premises environments. This provides control and visibility into the usage of your licenses, enabling you to limit licensing overages and reduce the risk of non-compliance and misreporting."
   },
@@ -661,7 +661,7 @@
   },
   {
     "name": "AWS Organizations",
-    "blurb": "AWS Organizations is an account management service that lets you consolidate multiple AWS accounts into an organization that you create and centrally manage. With AWS Organizations, you can create member accounts and invite existing accounts to join your organization. You can organize those accounts and manage them as a group.",
+    "blurb": "AWS Organizations is an account management service that lets you consolidate multiple AWS accounts into an organization that you create and centrally manage. With AWS Organizations, you can create member accounts and invite existing AWS accounts to join your organization. You can organize those accounts; and manage them as a group.",
     "abbreviation": "AWS Organizations",
     "desc": "AWS Organizations is an account management service that enables you to consolidate multiple AWS accounts into an organization that you create and centrally manage. AWS Organizations includes account management and consolidated billing capabilities that enable you to better meet the budgetary, security, and compliance needs of your business. As an administrator of an organization, you can create accounts in your organization and invite existing accounts to join the organization."
   },
@@ -691,7 +691,7 @@
   },
   {
     "name": "AWS Tools for PowerShell",
-    "blurb": "AWS Tools for PowerShell and AWS Tools for PowerShell Core are PowerShell modules, built on functionality exposed by the AWS SDK for .NET, that enable you to script operations on AWS resources from the PowerShell command line. Although you use the SDK’s service clients and methods to implement the cmdlets, the cmdlets give you a PowerShell experience to specify parameters and handle results. For example, the cmdlets in both modules support PowerShell pipelining to pipe PowerShell objects to and from the cmdlets.",
+    "blurb": "AWS Tools for PowerShell and AWS Tools for PowerShell Core are PowerShell modules, built on functionality exposed by the AWS SDK for .NET, that enable you to script operations on AWS resources from the PowerShell command line. Although you use the SDK's service clients and methods to implement the cmdlets, the cmdlets give you a PowerShell experience to specify parameters and handle results. For example, the cmdlets in both modules support PowerShell pipelining to pipe PowerShell objects to and from the cmdlets.",
     "abbreviation": "AWS Tools for PowerShell",
     "desc": "The AWS Tools for PowerShell are a set of PowerShell modules that are built on the functionality exposed by the AWS SDK for .NET. The AWS Tools for PowerShell enable you to script operations on your AWS resources from the PowerShell command line."
   },
@@ -703,7 +703,7 @@
   },
   {
     "name": "AWS Well-Architected Tool",
-    "blurb": "Use the AWS Well-Architected Tool to review your workloads against current AWS architectural best practices. The AWS Well-Architected Tool measures the workload and provides recommendations on how to improve your architecture.",
+    "blurb": "Use the AWS Well-Architected Tool to review your workloads against current Amazon Web Services architectural best practices. The AWS Well-Architected Tool measures the workload and provides recommendations on how to improve your architecture.",
     "abbreviation": "AWS Well-Architected Tool",
     "desc": "AWS Well-Architected Tool (AWS WA Tool) is a service in the cloud that provides a consistent process for measuring your architecture using AWS best practices. AWS WA Tool helps you throughout the product lifecycle by:"
   },
@@ -757,7 +757,7 @@
   },
   {
     "name": "AWS Fault Injection Simulator",
-    "blurb": "AWS Fault Injection Simulator (AWS FIS) is a managed service that enables you to perform fault injection experiments on your Amazon Web Services (AWS) workloads.",
+    "blurb": "AWS Fault Injection Simulator (AWS FIS) is a managed service that enables you to perform fault injection experiments on your AWS workloads.",
     "abbreviation": "AWS FIS",
     "desc": "AWS Fault Injection Simulator (AWS FIS) is a managed service that enables you to perform fault injection experiments on your AWS workloads. Fault injection is based on the principles of chaos engineering. These experiments stress an application by creating disruptive events so that you can observe how your application responds. You can then use this information to improve the performance and resiliency of your applications so that they behave as expected."
   },
@@ -787,9 +787,9 @@
   },
   {
     "name": "AWS Database Migration Service",
-    "blurb": "AWS Database Migration Service is a web service you can use to migrate data from your database that is on-premises, on an Amazon Relational Database Service (Amazon RDS) DB instance, or in a database on an Amazon Elastic Compute Cloud (Amazon EC2) instance to a database on an AWS service. These services can include a database on Amazon RDS or a database on an Amazon EC2 instance. You can also migrate a database from an AWS service to an on-premises database. You can migrate data between heterogeneous or homogenous database engines.",
+    "blurb": "AWS Database Migration Service (AWS DMS) is a web service you can use to migrate data from your database that is on-premises, on an Amazon Relational Database Service (Amazon RDS) DB instance, or in a database on an Amazon Elastic Compute Cloud (Amazon EC2) instance to a database on an AWS service. These services can include a database on Amazon RDS or a database on an Amazon EC2 instance. You can also migrate a database from an AWS service to an on-premises database. You can migrate data between heterogeneous or homogenous database engines.",
     "abbreviation": "AWS Database Migration Service",
-    "desc": "AWS Database Migration Service (AWS DMS) is a cloud service that makes it easy to migrate relational databases, data warehouses, NoSQL databases, and other types of data stores. You can use AWS DMS to migrate your data into the AWS Cloud, between on-premises instances (through an AWS Cloud setup), or between combinations of cloud and on-premises setups."
+    "desc": "AWS Database Migration Service (AWS DMS) is a cloud service that makes it easy to migrate relational databases, data warehouses, NoSQL databases, and other types of data stores. You can use AWS DMS to migrate your data into the AWS Cloud or between combinations of cloud and on-premises setups."
   },
   {
     "name": "AWS DataSync",
@@ -823,7 +823,7 @@
   },
   {
     "name": "Amazon API Gateway",
-    "blurb": "Amazon API Gateway enables you to create and deploy your own REST and WebSocket APIs at any scale. You can create robust, secure, and scalable APIs that access AWS or other web services, as well as data that’s stored in the AWS Cloud. You can create APIs to use in your own client applications, or you can make your APIs available to third-party app developers.",
+    "blurb": "Amazon API Gateway enables you to create and deploy your own REST and WebSocket APIs at any scale. You can create robust, secure, and scalable APIs that access Amazon Web Services or other web services, as well as data that’s stored in the AWS Cloud. You can create APIs to use in your own client applications, or you can make your APIs available to third-party app developers.",
     "abbreviation": "Amazon API Gateway",
     "desc": "Amazon API Gateway is an AWS service for creating, publishing, maintaining, monitoring, and securing REST, HTTP, and WebSocket APIs at any scale. API developers can create APIs that access AWS or other web services, as well as data stored in the AWS Cloud. As an API Gateway API developer, you can create APIs for use in your own client applications. Or you can make your APIs available to third-party app developers. For more information, see Who uses API Gateway?."
   },
@@ -847,7 +847,7 @@
   },
   {
     "name": "AWS Direct Connect",
-    "blurb": "AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection in place, you can create virtual interfaces directly to the AWS cloud and Amazon Virtual Private Cloud, bypassing Internet service providers in your network path.",
+    "blurb": "AWS Direct Connect establishes a dedicated network connection between your on-premises network and AWS. With this connection in place, you can create virtual interfaces directly to the AWS Cloud, bypassing your internet service provider. This can provide a more consistent network experience.",
     "abbreviation": "AWS Direct Connect",
     "desc": "AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection, you can create virtual interfaces directly to public AWS services (for example, to Amazon S3) or to Amazon VPC, bypassing internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the Region with which it is associated. You can use a single connection in a public Region or AWS GovCloud (US) to access public AWS services in all other public Regions."
   },
@@ -877,7 +877,7 @@
   },
   {
     "name": "AWS Virtual Private Network",
-    "blurb": "AWS Virtual Private Network (AWS VPN) lets you establish a secure and private tunnel from your network or device to the AWS Cloud. You can extend your existing on-premises network into a VPC, or connect to other AWS resources from a client. AWS VPN offers two types of private connectivity that feature the high availability and robust security necessary for your data.",
+    "blurb": "AWS Virtual Private Network (AWS VPN) establishes a secure and private tunnel from your network or device to the AWS Cloud. You can extend your existing on-premises network into a VPC, or connect to other AWS resources from a client. AWS VPN offers two types of private connectivity that feature the high availability and robust security necessary for your data.",
     "abbreviation": "AWS VPN",
     "desc": "By default, instances that you launch into an Amazon VPC can't communicate with your own (remote) network. You can enable access to your remote network from your VPC by creating an AWS Site-to-Site VPN (Site-to-Site VPN) connection, and configuring routing to pass traffic through the connection."
   },
@@ -1083,7 +1083,7 @@
     "name": "Amazon WorkSpaces Application Manager",
     "blurb": "Amazon WorkSpaces Application Manager (Amazon WAM) offers a fast, flexible, and secure way for you to deploy and manage applications for Amazon WorkSpaces.",
     "abbreviation": "Amazon WAM",
-    "desc": "Amazon WorkSpaces Application Manager (Amazon WAM) offers a fast, flexible, and secure way for you to deploy and manage applications for Amazon Workspaces with Windows. Amazon WAM accelerates software deployment, updates, patching, and retirement by packaging Microsoft Windows desktop applications into virtual containers that run as though they are installed natively."
+    "desc": "Amazon WorkSpaces Application Manager (Amazon WAM) offers a fast, flexible, and secure way for you to deploy and manage applications for Amazon WorkSpaces with Windows. Amazon WAM accelerates software deployment, updates, patching, and retirement by packaging Microsoft Windows desktop applications into virtual containers that run as though they are installed natively."
   },
   {
     "name": "NICE DCV",
@@ -1309,7 +1309,7 @@
   },
   {
     "name": "AWS Billing and Cost Management",
-    "blurb": "AWS Billing and Cost Management is a web service that provides features that helps you monitor your costs and pay your bill. Amazon Web Services (AWS) bills your account for usage, which ensures that you pay only for what you use.",
+    "blurb": "AWS Billing and Cost Management is a web service that provides features that helps you monitor your costs and pay your bill. Amazon Web Services bills your account for usage, which ensures that you pay only for what you use.",
     "abbreviation": "AWS Billing and Cost Management",
     "desc": "AWS Billing and Cost Management is the service that you use to pay your AWS bill, monitor your usage, and analyze and control your costs."
   },
@@ -1326,37 +1326,7 @@
     "desc": "Savings Plans offer a flexible pricing model that provides savings on AWS usage. You can save up to 72 percent on your AWS compute workloads. Compute Savings Plans provide lower prices on Amazon EC2 instance usage regardless of instance family, size, OS, tenancy, or AWS Region. This also applies to AWS Fargate and AWS Lambda usage. SageMaker Savings Plans provide you with lower prices for your Amazon SageMaker instance usage, regardless of your instance family, size, component, or AWS Region."
   },
   {
-    "name": "AWS Command Line Interface (AWS CLI)",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Studio Notebooks",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Key Management Service (AWS KMS)",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon Macie REST API",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Experiments",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Organizations HTTPS Query API",
+    "name": "AWS CLI",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1368,115 +1338,13 @@
     "desc": ""
   },
   {
-    "name": "SageMaker Neo",
+    "name": "SageMaker Studio Notebooks",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "GuardDuty HTTPS API",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Model Registry",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS IoT Device SDKs",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Debugger",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS IoT Analytics Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon S3",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS CLI",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Directory Service for Microsoft Active Directory",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Model Monitor",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Elastic Inference",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Autopilot",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Command Line Interface (CLI)",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker JumpStart",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Lambda extensions",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Command Line Tools",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS OpsWorks Stacks",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Organizations (Consolidated Billing)",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Model Building Pipelines",
+    "name": "Amazon Inspector Console",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1488,19 +1356,7 @@
     "desc": ""
   },
   {
-    "name": "Amazon EC2 Auto Scaling",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "SageMaker Ground Truth",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS OpsWorks for Chef Automate",
+    "name": "AWS OpsWorks Stacks",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1512,7 +1368,73 @@
     "desc": ""
   },
   {
-    "name": "Systems Manager pricing",
+    "name": "AWS Command Line Interface (CLI)",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Debugger",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "GuardDuty Console",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS IoT Device SDKs",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Tools for Windows PowerShell",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS IoT Analytics Console",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Experiments",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Budgets",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Clarify",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS OpsWorks for Chef Automate",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Lambda extensions",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Key Management Service (AWS KMS)",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1524,7 +1446,25 @@
     "desc": ""
   },
   {
-    "name": "AWS Tools for Windows PowerShell",
+    "name": "SageMaker Autopilot",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Organizations (Consolidated Billing)",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon Macie REST API",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon Inspector HTTPS API",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1542,43 +1482,49 @@
     "desc": ""
   },
   {
+    "name": "SageMaker Neo",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Elastic Inference",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Ground Truth",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS command line tools",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Identity and Access Management",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
     "name": "AWS SDKs",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "SageMaker Data Wrangler",
+    "name": "SageMaker Model Monitor",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "SageMaker Clarify",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon Inspector Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "GuardDuty Console",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "AWS Budgets",
-    "blurb": "",
-    "abbreviation": "",
-    "desc": ""
-  },
-  {
-    "name": "Amazon Inspector HTTPS API",
+    "name": "Systems Manager pricing",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1590,13 +1536,55 @@
     "desc": ""
   },
   {
+    "name": "SageMaker Model Registry",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon EC2 Auto Scaling",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Data Wrangler",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Command Line Tools",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
     "name": "SageMaker Studio",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
   },
   {
-    "name": "SageMaker ML Lineage Tracking",
+    "name": "AWS Command Line Interface (AWS CLI)",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker Model Building Pipelines",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "GuardDuty HTTPS API",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Directory Service for Microsoft Active Directory",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
@@ -1608,7 +1596,25 @@
     "desc": ""
   },
   {
-    "name": "AWS command line tools",
+    "name": "SageMaker JumpStart",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "Amazon S3",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "AWS Organizations HTTPS Query API",
+    "blurb": "",
+    "abbreviation": "",
+    "desc": ""
+  },
+  {
+    "name": "SageMaker ML Lineage Tracking",
     "blurb": "",
     "abbreviation": "",
     "desc": ""
