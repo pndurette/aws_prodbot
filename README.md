@@ -26,6 +26,8 @@ Set `DISABLE_TWEET` to anything to only generate it but not make any attempt to 
 ```bash
 cd src
 source ../.env
+# Once, import nltk data
+python -m nltk.downloader punkt averaged_perceptron_tagger
 python tweet.py aws.json
 ```
 
