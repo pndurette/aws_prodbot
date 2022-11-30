@@ -15,97 +15,7 @@ from requests import get
 # It only needs to be run to refresh aws.json,
 # which is included in the Docker image
 
-# The numbers of paragrahs of each product page to scrape
-# The more we add, the less relevant it becomes
-PARAGRAPHS = 1
-
-
-def get_items() -> List[Dict]:
-    items = []
-    names = []
-
-    # Get main Webpage
-    url = "https://aws.amazon.com/products/"
-    r = get(url)
-
-    # Extract product <div> list, e.g.
-    # <div class="lb-content-item">
-    #   <a href="/cloudwatch/?c=15&amp;pt=1"> <i></i>
-    #       <span>Amazon CloudWatch</span>
-    #       <cite>Monitor Resources and Applications</cite>
-    #   </a>
-    # </div>
-    soup = BeautifulSoup(r.text, "html.parser")
-    divs = soup.findAll("div", class_="lb-content-item")
-
-    # Structure
-    # {<item name>: <item desc>}
-    for d in divs:
-        product = dict()
-        sleep(1)
-
-        # Title (name) and subtitle (blurb)
-        product["name"] = d.a.span.text.strip()
-        product["blurb"] = d.a.cite.text.strip()
-
-        # Each product can exist in many main page
-        # categories, ignore subsquent ones
-        if product["name"] in names:
-            continue
-
-        # Get product Webpage
-        print("Getting", product["name"])
-        product_path = d.a["href"]
-        r = get(urllib.parse.urljoin(url, product_path))
-
-        # Extract product description
-        soup = BeautifulSoup(r.text, "html.parser")
-
-        # 1. Old product page, all <p> elements under div.lead
-        # e.g. https://aws.amazon.com/cloudsearch/
-        p = [x.text.strip() for x in soup.select("div.lead p")[:PARAGRAPHS]]
-
-        if not p:
-            # 2. New product page
-            # No distinct structure, but the first <p> elements
-            # Have the descriptions, take the first 2.
-            # e.g. https://aws.amazon.com/athena/
-            p = [x.text.strip() for x in soup.select("p")[:PARAGRAPHS]]
-
-        # elif not p:
-        #     # 3. The page is irregular, ignore (e.g. a beta)
-        #     # e.g. https://docs.aws.amazon.com/honeycode/index.html
-        #     print("Can't parse", product["name"])
-        #     continue
-
-        # try:
-        #     # Old product page, first <p> under div.lead
-        #     # e.g. https://aws.amazon.com/cloudsearch/
-        #     # p = soup.select_one("div.lead p").text.strip()
-        #     p = [x.text.strip() for x in soup.select("div.lead p")]
-        # except AttributeError:
-        #     # New product page, first <p>
-        #     # e.g. https://aws.amazon.com/athena/
-        #     try:
-        #         # The main description is the only <div> that has this
-        #         # color style set. Text is in the <p> elements.
-        #         print("HERE")
-        #         p = [x.text.strip() for x in soup.select("div[style='color:#232f3e;'] p")]
-        #         print("HERE")
-        #         print(p)
-        #     except AttributeError:
-        #         # The page is irregular, ignore (e.g. a beta)
-        #         # e.g. https://docs.aws.amazon.com/honeycode/index.html
-        #         print("Can't parse", product["name"])
-        #         continue
-
-        product["desc"] = " ".join(p)
-
-        names.append(product["name"])
-
-        items.append(product)
-
-    return items
+# Usage python get.py <json to save>
 
 
 def get_docs_items() -> List[Dict]:
@@ -128,19 +38,23 @@ def get_docs_items() -> List[Dict]:
     services = main_soup.find_all("service")
 
     """
-    <tile>
+    <list-card>
     <title>AWS Management Console</title>
-        <services>
+        <list-card-items>
+            <service href="/signin/latest/userguide/what-is-sign-in.html">
+                <prefix>AWS</prefix>
+                <name>Sign-In</name>
+            </service>
             <service href="/awsconsolehelpdocs/latest/gsg/getting-started.html?id=docs_gateway">
-            <prefix></prefix>
-            <name>Getting Started with the Console</name>
+                <prefix/>
+                <name>Getting Started with the Console</name>
+            </service>
             [...]
-        </services>
-    </tile>
-    <tile>
+        </list-card-items>
+    </list-card>
     """
 
-    # aka 'tiles'
+    # aka 'list-card's
     # Sections of https://docs.aws.amazon.com
     sections_to_skip = [
         "General Reference",
@@ -150,12 +64,7 @@ def get_docs_items() -> List[Dict]:
     ]
 
     for s in services:
-        service = {
-            "name": "",
-            "blurb": "",
-            "abbreviation": "",
-            "desc": ""
-        }
+        service = {"name": "", "blurb": "", "abbreviation": "", "desc": ""}
 
         # Skip the sections that aren't products per se.
         # Section titles are HTML-escaped
@@ -218,6 +127,40 @@ def get_docs_items() -> List[Dict]:
         </landing-page>
         """
 
+        """
+        <landing-page version="2.0">
+            <title>Amazon Elastic Container Registry Documentation</title>
+            <titleabbrev>Amazon ECR</titleabbrev>
+            <abstract>Amazon Elastic Container Registry (Amazon ECR) is a fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.</abstract>
+            [...]
+            <sections>
+                <section id="amazon-ecr">
+                    <title>Amazon ECR</title>
+                    <cards>
+                        [...]
+                        <simple-card href="/AmazonECR/latest/userguide/" guide="true">
+                            <title>User Guide</title>
+                            <abstract>Describes key concepts of Amazon ECR and provides instructions for using the features of Amazon ECR.</abstract>
+                            <footer/>
+                        </simple-card>
+                        <simple-card href="/AmazonECR/latest/APIReference/" guide="true">
+                            <title>API Reference</title>
+                            <abstract> Describes all the API operations for managing your private registry and private repositories on Amazon ECR.</abstract>
+                            <footer/>
+                        </simple-card>
+                        <simple-card href="/cli/latest/reference/ecr/" guide="true">
+                            <title>Amazon ECR section of the AWS CLI Reference</title>
+                            <abstract>Documents the Amazon ECR commands available in the AWS Command Line Interface (AWS CLI).</abstract>
+                            <footer/>
+                        </simple-card>
+                    </cards>
+                </section>
+                [...]
+            </sections>
+            [...]
+        </landing-page>
+        """
+
         # Service name
         # Page title is "<product> Documentation", remove " Documentation"
         page_title = service_soup.find("landing-page").title.string
@@ -243,6 +186,7 @@ def get_docs_items() -> List[Dict]:
         # <section> names often contain extra AWS product names!
         # Only if they start with "AWS", "Amazon"
         # e.g. AWS Lambda Data Firehose
+        # Note (Nov 2022): Much less now :(
         sections = service_soup.find_all("section")
         try:
             # Get section
@@ -259,6 +203,7 @@ def get_docs_items() -> List[Dict]:
                 or st.startswith("Amazon")
                 or st.endswith("Documentation")
                 or st.endswith("User Guide")
+                or st.endswith("Developer Guide")
                 and len(st.text) > 0
             ]
         except:
@@ -268,15 +213,15 @@ def get_docs_items() -> List[Dict]:
         extra_names += sections_titles
 
         # Dig into the first link of the page to get more content
-        # (typically a 'User Guide' or 'Developer pythonGuide')
+        # (typically a 'User Guide' or 'Developer Guide')
         # Not all sections have hrefs. Get the first one that does.
-        service_hrefs = service_soup.find_all("tile")
+        service_hrefs = service_soup.find_all("simple-card")
         for sh in service_hrefs:
             try:
                 service_first_href = sh["href"]
                 break
             except:
-                continue
+                pass
 
         # Discard URL parameters if they exist
         if "?" in service_first_href:
@@ -408,7 +353,6 @@ def save_items(items, filename) -> None:
 if __name__ == "__main__":
     # Usage python get.py <json to save>
 
-    # items = get_items()
     items = get_docs_items()
 
     # import pprint
