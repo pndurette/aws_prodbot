@@ -330,7 +330,10 @@ def get_docs_items() -> List[Dict]:
                 # 'desc' obtained from HTML can have weird encoding
                 # fix: https://stackoverflow.com/a/66815577
                 bytes_desc = bytes(clean_p, encoding="raw_unicode_escape")
-                service["desc"] = bytes_desc.decode("utf-8", "strict")
+                try:
+                    service["desc"] = bytes_desc.decode("utf-8", "strict")
+                except:
+                    service["desc"] = bytes_desc.decode("ISO-8859-1", "strict")
                 break
 
         # <dt> elements often contain extra AWS product names!
@@ -375,19 +378,26 @@ def get_page_xml(url) -> str:
     r = get(url)
     soup = BeautifulSoup(r.text, "html.parser")
 
-    script_tags = soup.select("script")
-    for s in script_tags:
-        if not s.string:
-            continue
+    # Old way, they moved the encoded XML in
+    # <input id=anding-page-xml ... value="">
 
-        match = re.search(
-            r"landingPageXml = '(?P<encoded_xml>.+)';", s.string, re.M | re.I
-        )
+    # script_tags = soup.select("script")
+    # for s in script_tags:
+    #     if not s.string:
+    #         continue
 
-        if match:
-            return unquote(match["encoded_xml"])
+    #     match = re.search(
+    #         r"landingPageXml = '(?P<encoded_xml>.+)';", s.string, re.M | re.I
+    #     )
 
-    return None
+    #     if match:
+    #         return unquote(match["encoded_xml"])
+
+    landing_page_xml_input = soup.select("#landing-page-xml")
+    try:
+        return unquote(landing_page_xml_input[0]["value"])
+    except IndexError:
+        return None
 
 
 def save_items(items, filename) -> None:
