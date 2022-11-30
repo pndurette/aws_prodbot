@@ -11,14 +11,17 @@ bs4 = "^0.0.1"
 requests = "^2.25.1"
 nltk = "^3.6.2"
 markovify = "^0.9.0"
-tweepy = "^3.10.0"
 gunicorn = "^20.1.0"
 Flask = "^2.0.1"
 lxml = "^4.6.3"
+"Mastodon.py" = "^1.7.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.5b2"
 isort = "^5.8.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

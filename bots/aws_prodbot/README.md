@@ -3,10 +3,13 @@
 Generate absurd-yet-plausible AWS offerings by mashing up existing products and their documentation with basic NLP, Markov Chains and by analysing current naming patterns. 
 
 ## Build
-
 ```bash
 docker build . -t gcr.io/twitter-bots-pnd/aws-prodbot:latest
 ```
+
+**Note:** Use Cloud Build when from an ARM machine 
+`gcloud builds submit --tag gcr.io/twitter-bots-pnd/aws-prodbot:latest`
+
 
 ## Push
 
@@ -17,7 +20,7 @@ docker push gcr.io/twitter-bots-pnd/aws-prodbot:latest
 
 ## Run
 
-Set `DISABLE_TWEET` to anything to only generate it but not make any attempt to tweet
+Set `DISABLE_TOOT` to anything to only generate it but not make any attempt to tweet
 
 ### Dev
 
@@ -35,21 +38,19 @@ python tweet.py aws.json
 
 ```bash
 docker run \
-	-e API_KEY="$API_KEY" \
-	-e API_SECRET="$API_SECRET" \
-	-e ACCESS_TOKEN="$ACCESS_TOKEN" \
-	-e ACCESS_TOKEN_SECRET="$ACCESS_TOKEN_SECRET" \
+	-e MASTODON_API_URL="$MASTODON_API_URL" \
+	-e MASTODON_ACCESS_TOKEN="$MASTODON_ACCESS_TOKEN" \
     -e AWS_PRODUCTS_FILE="$AWS_PRODUCTS_FILE" \
     -p 8080:8080 \
 	gcr.io/twitter-bots-pnd/aws-prodbot:latest
 ```
 
-### Production (not really, but yeah)
+### Production (sort of.)
 
 ```bash
 cd src
 source ../.env
-flask run --host=0.0.0.0 --port 8080
+python ./app.py
 ```
 
 ## Misc notes
